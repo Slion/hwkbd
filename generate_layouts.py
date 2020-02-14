@@ -78,6 +78,7 @@ USINTL_ALTGR_REPLACE_APOSTROPHE = [
         REPL_SKIP: ["alt:", "label:"],
     },
 ]
+
 USINTL_ALTGR_REPLACE_GRAVE = [
     {
         REPL_KEYCODE: "GRAVE",
@@ -104,6 +105,61 @@ USINTL_ALTGR_REPLACE_GRAVE = [
         REPL_SKIP: ["alt:", "label:"],
     },
 ]
+
+USINTL_ALTGR_FN_REPLACE_APOSTROPHE = [
+    {
+        REPL_KEYCODE: "APOSTROPHE",
+        REPL_OLD: r"'\''",
+        REPL_NEW: r"'\u0301'",
+        REPL_SKIP: ["fn:", "label:"],
+    },
+    {
+        REPL_KEYCODE: "APOSTROPHE",
+        REPL_OLD: "'\"'",
+        REPL_NEW: r"'\u0308'",
+        REPL_SKIP: ["alt:", "label:"],
+    },
+    {
+        REPL_KEYCODE: "APOSTROPHE",
+        REPL_OLD: r"'\u0301'",
+        REPL_NEW: r"'\''",
+        REPL_SKIP: ["fn:", "label:"],
+    },
+    {
+        REPL_KEYCODE: "APOSTROPHE",
+        REPL_OLD: r"'\u0308'",
+        REPL_NEW: "'\"'",
+        REPL_SKIP: ["fn:", "label:"],
+    },
+]
+
+USINTL_ALTGR_FN_REPLACE_GRAVE = [
+    {
+        REPL_KEYCODE: "GRAVE",
+        REPL_OLD: r"'`'",
+        REPL_NEW: r"'\u0300'",
+        REPL_SKIP: ["fn:", "label:"],
+    },
+    {
+        REPL_KEYCODE: "GRAVE",
+        REPL_OLD: "'~'",
+        REPL_NEW: r"'\u0303'",
+        REPL_SKIP: ["alt:", "label:"],
+    },
+    {
+        REPL_KEYCODE: "GRAVE",
+        REPL_OLD: r"'\u0300'",
+        REPL_NEW: r"'`'",
+        REPL_SKIP: ["fn:", "label:"],
+    },
+    {
+        REPL_KEYCODE: "GRAVE",
+        REPL_OLD: r"'\u0303'",
+        REPL_NEW: "'~'",
+        REPL_SKIP: ["fn:", "label:"],
+    },
+]
+
 
 USINTL_POL_PROG_REPLACE = [
     ("u00e9", "u0119"),  # é to ę
@@ -174,8 +230,8 @@ GENERATED_LAYOUTS = [
     {
         NAME: "pro1_qwerty_usaintl_fndead_2.kcm",
         SOURCE: "pro1_qwerty_usaintl_2.kcm",
-        REPLACE: USINTL_ALTGR_REPLACE_APOSTROPHE+
-                 USINTL_ALTGR_REPLACE_GRAVE,
+        REPLACE: USINTL_ALTGR_FN_REPLACE_APOSTROPHE+
+                 USINTL_ALTGR_FN_REPLACE_GRAVE,
     },
     {
         NAME: "pro1_qwertz_usaintl_fndead.kcm",

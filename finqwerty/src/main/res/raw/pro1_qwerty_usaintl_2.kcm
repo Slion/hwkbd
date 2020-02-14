@@ -25,86 +25,86 @@ key ESCAPE {
 
 key 1 {
     label, base:                        '1'
-    shift:                              '!'
+    fn:                                 '!'
     alt:                                replace F1
-    fn:                                 '\u00a1'
+    shift:                              '\u00a1'
     fn+shift, ctrl+fn:                  '\u00b9'
 }
 key 2 {
     label, base:                        '2'
-    shift:                              '@'
+    fn:                                 '@'
     alt:                                replace F2
-    fn:                                 '\u00b2'
+    shift:                              '\u00b2'
     fn+shift, ctrl+fn:                  '\u030b'
 }
 key 3 {
     label, base:                        '3'
-    shift:                              '#'
+    fn:                                 '#'
     alt:                                replace F3
-    fn:                                 '\u00b3'
+    shift:                              '\u00b3'
     fn+shift, ctrl+fn:                  '\u0304'
 }
 key 4 {
     label, base:                        '4'
-    shift:                              '$'
+    fn:                                 '$'
     alt:                                replace F4
-    fn:                                 '\u00a4'
+    shift:                              '\u00a4'
     fn+shift, ctrl+fn:                  '\u00a3'
 }
 key 5 {
     label, base:                        '5'
-    shift:                              '%'
+    fn:                                 '%'
     alt:                                replace F5
-    fn:                                 '\u20ac'
+    shift:                              '\u20ac'
     fn+shift, ctrl+fn:                  '\u0327'
 }
 key 6 {
     label, base:                        '6'
-    shift:                              '\u0302'
+    fn:                                '\u0302'
     alt:                                replace F6
-    fn:                                 '\u00bc'
+    shift:                              '\u00bc'
     fn+shift, ctrl+fn:                  '^'
 }
 key 7 {
     label, base:                        '7'
-    shift:                              '&'
+    fn:                                 '&'
     alt:                                replace F7
-    fn:                                 '\u00bd'
+    shift:                              '\u00bd'
     fn+shift, ctrl+fn:                  '\u031b'
 }
 key 8 {
     label, base:                        '8'
-    shift:                              '*'
+    fn:                                 '*'
     alt:                                replace F8
-    fn:                                 '\u00be'
+    shift:                              '\u00be'
     fn+shift, ctrl+fn:                  '\u0328'
 }
 key 9 {
     label, base:                        '9'
-    shift:                              '('
+    fn:                                 '('
     alt:                                replace F9
-    fn:                                 '\u2018'
+    shift:                              '\u2018'
     fn+shift, ctrl+fn:                  '\u0306'
 }
 key 0 {
     label, base:                        '0'
-    shift:                              ')'
+    fn:                                 ')'
     alt:                                replace F10
-    fn:                                 '\u2019'
+    shift:                              '\u2019'
     fn+shift, ctrl+fn:                  '\u030a'
 }
 key MINUS {
     label, base:                        '-'
-    shift:                              '_'
+    fn:                                 '_'
     alt:                                replace F11
-    fn:                                 '\u00a5'
+    shift:                              '\u00a5'
     fn+shift, ctrl+fn:                  '\u0323'
 }
 key EQUALS {
     label, base:                        '='
-    shift:                              '+'
+    fn:                                 '+'
     alt:                                replace F12
-    fn:                                 '\u00d7'
+    shift:                              '\u00d7'
     fn+shift, ctrl+fn:                  '\u00f7'
 }
 
@@ -114,8 +114,8 @@ key GRAVE {
     label:                              '`'
     base:                               '\u0300'
     shift:                              '\u0303'
-    alt:                                '~'
-    fn:                                 '`'
+    fn:                                 '~'
+    alt:                                '`'
     fn+shift, ctrl+fn:                  '~'
 }
 
@@ -198,28 +198,28 @@ key P {
     label:                              'P'
     base:                               'p'
     shift, capslock:                    'P'
-    alt:                                '/'
-    fn:                                 '\u00f6'
+    fn:                                 '/'
+    alt:                                '\u00f6'
     fn+shift, ctrl+fn, fn+capslock:     '\u00d6'
 }
 
-key LEFT_BRACKET {
-    label:                              '['
-    base:                               '['
-    shift, alt:                         '{'
-    fn:                                 '\u00ab'
-    fn+shift, ctrl+fn:                  '\u201c'
-}
-
-key RIGHT_BRACKET {
-    label:                              ']'
-    base:                               ']'
-    shift, alt:                         '}'
-    fn:                                 '\u00bb'
-    fn+shift, ctrl+fn:                  '\u201d'
+key SEMICOLON {
+    label:                              ';'
+    base:                               ';'
+    shift, fn:                          ':'
+    alt:                                '\u00b7'
+    fn+shift, ctrl+fn:                  '\u00b0'
 }
 
 # ROW 3
+
+key BACKSLASH {
+    label:                              '\u005c'
+    base:                               '\u005c'
+    shift, fn:                          '|'
+    alt:                                '\u00ac'
+    fn+shift, ctrl+fn:                  '\u00a6'
+}
 
 key A {
     label:                              'A'
@@ -285,36 +285,36 @@ key L {
     label:                              'L'
     base:                               'l'
     shift, capslock:                    'L'
-    alt:                                '?'
-    fn:                                 '\u00f8'
+    fn:                                 '?'
+    alt:                                '\u00f8'
     fn+shift, ctrl+fn, fn+capslock:     '\u00d8'
-}
-
-key SEMICOLON {
-    label:                              ';'
-    base:                               ';'
-    shift, alt:                         ':'
-    fn:                                 '\u00b7'
-    fn+shift, ctrl+fn:                  '\u00b0'
 }
 
 key APOSTROPHE {
     label:                              '\''
     base:                               '\u0301'
     shift:                              '\u0308'
-    alt:                                '"'
-    fn:                                 '\''
+    fn:                                 '"'
+    alt:                                '\''
     fn+shift, ctrl+fn:                  '"'
 }
 
 # ROW 4
 
-key BACKSLASH {
-    label:                              '\u005c'
-    base:                               '\u005c'
-    shift, alt:                         '|'
-    fn:                                 '\u00ac'
-    fn+shift, ctrl+fn:                  '\u00a6'
+key LEFT_BRACKET {
+    label:                              '['
+    base:                               '['
+    shift, fn:                          '{'
+    alt:                                '\u00ab'
+    fn+shift, ctrl+fn:                  '\u201c'
+}
+
+key RIGHT_BRACKET {
+    label:                              ']'
+    base:                               ']'
+    shift, fn:                          '}'
+    alt:                                '\u00bb'
+    fn+shift, ctrl+fn:                  '\u201d'
 }
 
 key Z {
@@ -373,18 +373,20 @@ key M {
 key COMMA {
     label:                              ','
     base:                               ','
-    shift, alt:                         '<'
-    fn:                                 '\u00e7'
+    shift, fn:                          '<'
+    alt:                                '\u00e7'
     fn+shift, ctrl+fn, fn+capslock:     '\u00c7'
 }
 
 key PERIOD {
     label:                              '.'
     base:                               '.'
-    shift, alt:                         '>'
-    fn:                                 '\u0307'
+    shift, fn:                          '>'
+    alt:                                 '\u0307'
     fn+shift, ctrl+fn:                  '\u030c'
 }
+
+# Direction keys
 
 key DPAD_UP {
     fn:                                 replace PAGE_UP
