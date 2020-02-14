@@ -7,14 +7,14 @@ map key 158 ESCAPE
 
 # orig SYM but SYM does not do anything at the moment
 # so use as back/wakeup for now
-map key 249 WAKEUP
+#map key 249 WAKEUP
 
 # map alt+sym = F6 (which signals keyboard open), allowing one to press alt+sym
 # to trigger enabling keyboard backlight and screen rotation as sometimes the
 # Pro1 stock OS seems to lose the keyboard open state
-key WAKEUP {
-    alt:                                replace F6
-}
+#key WAKEUP {
+#    alt:                                replace F6
+#}
 
 # ROW 1
 
@@ -25,73 +25,85 @@ key ESCAPE {
 
 key 1 {
     label, base:                        '1'
-    shift, alt:                         '!'
+    shift:                              '!'
+    alt:                                replace F1
     fn:                                 '\u00a1'
     fn+shift, ctrl+fn:                  '\u00b9'
 }
 key 2 {
     label, base:                        '2'
-    shift, alt:                         '@'
+    shift:                              '@'
+    alt:                                replace F2
     fn:                                 '\u00b2'
     fn+shift, ctrl+fn:                  '\u030b'
 }
 key 3 {
     label, base:                        '3'
-    shift, alt:                         '#'
+    shift:                              '#'
+    alt:                                replace F3
     fn:                                 '\u00b3'
     fn+shift, ctrl+fn:                  '\u0304'
 }
 key 4 {
     label, base:                        '4'
-    shift, alt:                         '$'
+    shift:                              '$'
+    alt:                                replace F4
     fn:                                 '\u00a4'
     fn+shift, ctrl+fn:                  '\u00a3'
 }
 key 5 {
     label, base:                        '5'
-    shift, alt:                         '%'
+    shift:                              '%'
+    alt:                                replace F5
     fn:                                 '\u20ac'
     fn+shift, ctrl+fn:                  '\u0327'
 }
 key 6 {
     label, base:                        '6'
-    shift, alt:                         '\u0302'
+    shift:                              '\u0302'
+    alt:                                replace F6
     fn:                                 '\u00bc'
     fn+shift, ctrl+fn:                  '^'
 }
 key 7 {
     label, base:                        '7'
-    shift, alt:                         '&'
+    shift:                              '&'
+    alt:                                replace F7
     fn:                                 '\u00bd'
     fn+shift, ctrl+fn:                  '\u031b'
 }
 key 8 {
     label, base:                        '8'
-    shift, alt:                         '*'
+    shift:                              '*'
+    alt:                                replace F8
     fn:                                 '\u00be'
     fn+shift, ctrl+fn:                  '\u0328'
 }
 key 9 {
     label, base:                        '9'
-    shift, alt:                         '('
+    shift:                              '('
+    alt:                                replace F9
     fn:                                 '\u2018'
     fn+shift, ctrl+fn:                  '\u0306'
 }
 key 0 {
     label, base:                        '0'
-    shift, alt:                         ')'
+    shift:                              ')'
+    alt:                                replace F10
     fn:                                 '\u2019'
     fn+shift, ctrl+fn:                  '\u030a'
 }
 key MINUS {
     label, base:                        '-'
-    shift, alt:                         '_'
+    shift:                              '_'
+    alt:                                replace F11
     fn:                                 '\u00a5'
     fn+shift, ctrl+fn:                  '\u0323'
 }
 key EQUALS {
     label, base:                        '='
-    shift, alt:                         '+'
+    shift:                              '+'
+    alt:                                replace F12
     fn:                                 '\u00d7'
     fn+shift, ctrl+fn:                  '\u00f7'
 }
@@ -375,11 +387,14 @@ key PERIOD {
 }
 
 key DPAD_UP {
-    fn:                                 replace PAGE_UP    
+    fn:                                 replace PAGE_UP
+    # Turn on keyboard backlight
+    alt:                                replace F6    
 }
 
 key DPAD_DOWN {
     fn:                                 replace PAGE_DOWN
+    alt:                                replace POWER
 }
 
 key DPAD_LEFT {

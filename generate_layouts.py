@@ -172,6 +172,12 @@ GENERATED_LAYOUTS = [
                  USINTL_ALTGR_REPLACE_GRAVE,
     },
     {
+        NAME: "pro1_qwerty_usaintl_fndead_2.kcm",
+        SOURCE: "pro1_qwerty_usaintl_2.kcm",
+        REPLACE: USINTL_ALTGR_REPLACE_APOSTROPHE+
+                 USINTL_ALTGR_REPLACE_GRAVE,
+    },
+    {
         NAME: "pro1_qwertz_usaintl_fndead.kcm",
         SOURCE: "pro1_qwertz_usaintl_1.kcm",
         REPLACE: USINTL_ALTGR_REPLACE_APOSTROPHE,
@@ -240,7 +246,7 @@ def generate_layout(layout, target_dir):
     source_dir = target_dir if layout.get(IS_SOURCE_GENERATED) else layout_dir
     with \
     open(os.path.join(source_dir, layout[SOURCE]), 'r') as src, \
-    open(os.path.join(target_dir, layout[NAME]), 'w') as dst:
+    open(os.path.join(target_dir, layout[NAME]), 'w', encoding="utf-8") as dst:
         remove_this_key = False
         cur_keycode = None
         rules_matched = {REPLACE: [], REMOVE_SCANCODES: [], REMOVE_KEYCODES: []}

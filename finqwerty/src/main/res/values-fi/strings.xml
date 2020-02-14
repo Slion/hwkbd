@@ -57,6 +57,7 @@
     <string name="pro1_qwerty_cze_1">FinQwerty F(x)tec Pro1, tšekkiläinen QWERTY, fyysinen QWERTY</string>
     <string name="pro1_qwerty_usa_1">FinQwerty F(x)tec Pro1, amerikkalainen, fyysinen QWERTY</string>
     <string name="pro1_qwerty_usaintl_1">FinQwerty F(x)tec Pro1, amerikkalainen (kansainvälinen), tarkenäppäimillä, fyysinen QWERTY</string>
+    <string name="pro1_qwerty_usaintl_2">Alpha Slions F(x)tec Pro1, amerikkalainen (kansainvälinen), tarkenäppäimillä, fyysinen QWERTY</string>
     <string name="pro1_qwertz_ger_1">FinQwerty F(x)tec Pro1, saksalainen, fyysinen QWERTZ</string>
     <string name="pro1_qwertz_usaintl_1">FinQwerty F(x)tec Pro1, amerikkalainen (kansainvälinen), tarkenäppäimillä, fyysinen QWERTZ</string>
     <string name="action_website">Lisätietoja</string>
@@ -65,6 +66,7 @@
     <string name="pro1_qwertz_cze_2">FinQwerty F(x)tec Pro1, tšekkiläinen QWERTZ, fyysinen QWERTZ</string>
     <string name="pro1_qwerty_hun_1">FinQwerty F(x)tec Pro1, unkarilainen, fyysinen QWERTY</string>
     <string name="pro1_qwerty_usaintl_fndead">FinQwerty F(x)tec Pro1, amerikkalainen (kansainvälinen), Fn-tarkenäppäimillä, fyysinen QWERTY</string>
+    <string name="pro1_qwerty_usaintl_fndead_2">Alpha Slions F(x)tec Pro1, amerikkalainen (kansainvälinen), Fn-tarkenäppäimillä, fyysinen QWERTY</string>
     <string name="pro1_qwertz_hun_1">FinQwerty F(x)tec Pro1, unkarilainen, fyysinen QWERTZ</string>
     <string name="pro1_qwertz_usaintl_fndead">FinQwerty F(x)tec Pro1, amerikkalainen (kansainvälinen), Fn-tarkenäppäimillä, fyysinen QWERTZ</string>
     <string name="action_changelog">Muutosloki</string>

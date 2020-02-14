@@ -39,6 +39,8 @@
     <string name="pro1_qwerty_usa_1">FinQwerty F(x)tec Pro1, U.S. for physical US QWERTY</string>
     <string name="pro1_qwerty_usaintl_1">FinQwerty F(x)tec Pro1, U.S. intl. with dead keys for physical US QWERTY</string>
     <string name="pro1_qwerty_usaintl_fndead">FinQwerty F(x)tec Pro1, U.S. intl. with Fn dead keys for physical US QWERTY</string>
+    <string name="pro1_qwerty_usaintl_2">Alpha Slions F(x)tec Pro1, U.S. intl. with dead keys for physical US QWERTY</string>
+    <string name="pro1_qwerty_usaintl_fndead_2">Alpha Slions F(x)tec Pro1, U.S. intl. with Fn dead keys for physical US QWERTY</string>
     <string name="pro1_qwertz_cze_1">FinQwerty F(x)tec Pro1, Czech QWERTY for physical DE QWERTZ</string>
     <string name="pro1_qwertz_cze_2">FinQwerty F(x)tec Pro1, Czech QWERTZ for physical DE QWERTZ</string>
     <string name="pro1_qwertz_dan_1">FinQwerty F(x)tec Pro1, Danish for physical DE QWERTZ</string>
