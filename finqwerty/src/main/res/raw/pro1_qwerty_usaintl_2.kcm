@@ -9,12 +9,28 @@ map key 158 ESCAPE
 # so use as back/wakeup for now
 #map key 249 WAKEUP
 
+# Brings up google assistant, why not
+map key 249 META_LEFT
+
 # map alt+sym = F6 (which signals keyboard open), allowing one to press alt+sym
 # to trigger enabling keyboard backlight and screen rotation as sometimes the
 # Pro1 stock OS seems to lose the keyboard open state
 #key WAKEUP {
 #    alt:                                replace F6
 #}
+
+#key ALT_LEFT {
+#    base: replace ALT_LEFT
+#    fn: replace PICTSYMBOLS
+#}
+
+key SPACE {
+    label, base: ' '
+    # Character picker dialog
+    alt: '\uef01'
+    fn: replace EXPLORER
+    shift: replace SEARCH
+}
 
 # ROW 1
 
@@ -30,6 +46,7 @@ key 1 {
     shift:                              '\u00a1'
     fn+shift, ctrl+fn:                  '\u00b9'
 }
+
 key 2 {
     label, base:                        '2'
     fn:                                 '@'
@@ -37,6 +54,7 @@ key 2 {
     shift:                              '\u00b2'
     fn+shift, ctrl+fn:                  '\u030b'
 }
+
 key 3 {
     label, base:                        '3'
     fn:                                 '#'
@@ -44,6 +62,7 @@ key 3 {
     shift:                              '\u00b3'
     fn+shift, ctrl+fn:                  '\u0304'
 }
+
 key 4 {
     label, base:                        '4'
     fn:                                 '$'
@@ -51,6 +70,7 @@ key 4 {
     shift:                              '\u00a4'
     fn+shift, ctrl+fn:                  '\u00a3'
 }
+
 key 5 {
     label, base:                        '5'
     fn:                                 '%'
@@ -58,6 +78,7 @@ key 5 {
     shift:                              '\u20ac'
     fn+shift, ctrl+fn:                  '\u0327'
 }
+
 key 6 {
     label, base:                        '6'
     fn:                                '\u0302'
@@ -65,6 +86,7 @@ key 6 {
     shift:                              '\u00bc'
     fn+shift, ctrl+fn:                  '^'
 }
+
 key 7 {
     label, base:                        '7'
     fn:                                 '&'
@@ -72,6 +94,7 @@ key 7 {
     shift:                              '\u00bd'
     fn+shift, ctrl+fn:                  '\u031b'
 }
+
 key 8 {
     label, base:                        '8'
     fn:                                 '*'
@@ -79,6 +102,7 @@ key 8 {
     shift:                              '\u00be'
     fn+shift, ctrl+fn:                  '\u0328'
 }
+
 key 9 {
     label, base:                        '9'
     fn:                                 '('
@@ -86,6 +110,7 @@ key 9 {
     shift:                              '\u2018'
     fn+shift, ctrl+fn:                  '\u0306'
 }
+
 key 0 {
     label, base:                        '0'
     fn:                                 ')'
@@ -93,6 +118,7 @@ key 0 {
     shift:                              '\u2019'
     fn+shift, ctrl+fn:                  '\u030a'
 }
+
 key MINUS {
     label, base:                        '-'
     fn:                                 '_'
@@ -100,6 +126,7 @@ key MINUS {
     shift:                              '\u00a5'
     fn+shift, ctrl+fn:                  '\u0323'
 }
+
 key EQUALS {
     label, base:                        '='
     fn:                                 '+'
@@ -109,6 +136,11 @@ key EQUALS {
 }
 
 # ROW 2
+
+key TAB {
+    label, base: '\t'
+    fn: replace APP_SWITCH
+}
 
 key GRAVE {
     label:                              '`'
