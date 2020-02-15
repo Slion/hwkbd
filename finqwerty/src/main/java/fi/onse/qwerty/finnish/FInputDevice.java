@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
-package fi.onse.qwerty.finnish;
+package net.slions.fxtec.pro1.qwerty;
 
 import android.content.Context;
 import android.content.res.Resources;

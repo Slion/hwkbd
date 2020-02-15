@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FinQwerty Keyboard Layouts</string>
+    <string name="app_name">Qwerty Keyboard Layouts for F(x)tec Pro1</string>
 
     <string name="xt894_finnish_1" translatable="false">FinQwerty Droid 4, Motorola</string>
     <string name="xt897_finnish_1" translatable="false">FinQwerty Photon Q, Motorola</string>
@@ -55,7 +55,7 @@
 
     <string name="empty_layout">FinQwerty None (stock layout)</string>
 
-    <string name="title_activity_main" translatable="false">FinQwerty</string>
+    <string name="title_activity_main" translatable="false">Fx Qwerty</string>
 
     <string name="configure_help_semi"><![CDATA[You can configure your physical keyboard layout in the \"Language & input\" section of Android Settings, by selecting the first item under the \"Physical keyboard\" heading there.]]></string>
     <string name="configure_button_text_semi">Language &amp; input settings</string>
