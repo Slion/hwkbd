@@ -185,43 +185,6 @@ USINTL_POL_PROG_REPLACE = [
 
 GENERATED_LAYOUTS = [
     {
-        NAME: "pro1_qwerty_cze_1.kcm",
-        SOURCE: "pro1_qwerty_cze_2.kcm",
-        REMOVE_SCANCODES: [
-            21, # Z
-            44, # Y
-        ],
-    },
-    {
-        NAME: "pro1_qwertz_cze_1.kcm",
-        SOURCE: "pro1_qwertz_cze_2.kcm",
-        REPLACE: [
-            ("map key 20 Z", "map key 20 Y"),
-            ("map key 27 Y", "map key 27 Z"),
-            ("key Y", "key Z"),
-            ("key Z", "key Y"),
-            ("'z'", "'y'"),
-            ("'Z'", "'Y'"),
-            ("'y'", "'z'"),
-            ("'Y'", "'Z'"),
-        ],
-    },
-    {
-        NAME: "pro1_qwerty_nor_1.kcm",
-        SOURCE: "pro1_qwerty_dan_1.kcm",
-        REPLACE: DAN_NOR_REPLACE,
-    },
-    {
-        NAME: "pro1_qwertz_nor_1.kcm",
-        SOURCE: "pro1_qwertz_dan_1.kcm",
-        REPLACE: DAN_NOR_REPLACE,
-    },
-    {
-        NAME: "pro1_qwerty_swe_1.kcm",
-        SOURCE: "pro1_qwerty_dan_1.kcm",
-        REPLACE: DAN_SWE_REPLACE,
-    },
-    {
         NAME: "pro1_qwerty_usaintl_fndead.kcm",
         SOURCE: "pro1_qwerty_usaintl_1.kcm",
         REPLACE: USINTL_ALTGR_REPLACE_APOSTROPHE+
@@ -232,63 +195,7 @@ GENERATED_LAYOUTS = [
         SOURCE: "pro1_qwerty_usaintl_2.kcm",
         REPLACE: USINTL_ALTGR_FN_REPLACE_APOSTROPHE+
                  USINTL_ALTGR_FN_REPLACE_GRAVE,
-    },
-    {
-        NAME: "pro1_qwertz_usaintl_fndead.kcm",
-        SOURCE: "pro1_qwertz_usaintl_1.kcm",
-        REPLACE: USINTL_ALTGR_REPLACE_APOSTROPHE,
-        # no GRAVE key on QWERTZ variant
-    },
-    {
-        NAME: "pro1_qwertz_fin_1.kcm",
-        SOURCE: "pro1_qwertz_dan_1.kcm",
-        REPLACE: DAN_SWE_REPLACE,
-    },
-    {
-        NAME: "pro1_qwerty_fin_1.kcm",
-        SOURCE: "pro1_qwerty_swe_1.kcm",
-        IS_SOURCE_GENERATED: True,
-        REPLACE: [
-            ("å", "ä"),
-            ("u00e5", "u00e4"),
-            ("Å", "Ä"),
-            ("u00c5", "u00c4"),
-        ],
-        REMOVE_SCANCODES: [
-            111, # DEL
-            13, # =
-        ],
-        REMOVE_KEYCODES: [
-            "PLUS",
-        ],
-        ADD: r"""
-key O {
-    label:                              'O'
-    base:                               'o'
-    shift, capslock:                    'O'
-    fn:                                 '\u00e5' # å
-    fn+shift, fn+capslock, fn+ctrl:     '\u00c5' # Å
-}
-""",
-    },
-    {
-        NAME: "pro1_qwerty_pol_prog.kcm",
-        SOURCE: "pro1_qwerty_usaintl_fndead.kcm",
-        IS_SOURCE_GENERATED: True,
-        REPLACE: USINTL_POL_PROG_REPLACE,
-        REMOVE_KEYCODES : [
-            "X",
-        ],
-        ADD: r"""
-key X {
-    label:                              'X'
-    base:                               'x'
-    shift, capslock:                    'X'
-    fn:                                 '\u017a' # ź
-    fn+shift, ctrl+fn, fn+capslock:     '\u0179' # Ź
-}
-""",
-    },
+    }
 ]
 
 def expand_replacement(rule):
