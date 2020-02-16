@@ -3,7 +3,9 @@
 <keyboard-layouts xmlns:android="http://schemas.android.com/apk/res/android">
 
     <keyboard-layout android:name="pro1_qwerty_usaintl_2" android:label="@string/pro1_qwerty_usaintl_2" android:keyboardLayout="@raw/pro1_qwerty_usaintl_2"/>
-    <keyboard-layout android:name="pro1_qwerty_usaintl_fndead_2" android:label="@string/pro1_qwerty_usaintl_fndead_2" android:keyboardLayout="@raw/pro1_qwerty_usaintl_fndead_2"/>
+    <keyboard-layout android:name="pro1_qwerty_usaintl_english_primary" android:label="@string/pro1_qwerty_usaintl_english_primary" android:keyboardLayout="@raw/pro1_qwerty_usaintl_english_primary"/>
+    <keyboard-layout android:name="pro1_qwerty_usaintl_alt_fn_swap_english_primary" android:label="@string/pro1_qwerty_usaintl_alt_fn_swap_english_primary" android:keyboardLayout="@raw/pro1_qwerty_usaintl_alt_fn_swap_english_primary"/>
+    <keyboard-layout android:name="pro1_qwerty_usaintl_alt_fn_swap_english_secondary" android:label="@string/pro1_qwerty_usaintl_alt_fn_swap_english_secondary" android:keyboardLayout="@raw/pro1_qwerty_usaintl_alt_fn_swap_english_secondary"/>
     <keyboard-layout android:name="empty" android:label="@string/empty_layout" android:keyboardLayout="@raw/empty"/>
 
 </keyboard-layouts>

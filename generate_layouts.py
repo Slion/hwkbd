@@ -29,6 +29,14 @@ REPL_NEW = "repl_new"
 # do not replace if line contains:
 REPL_SKIP = "repl_skip"
 
+#
+SWAP_ALT_FN = r"""
+# Swap alt and fn
+# Alt is now Fn
+map key 464 ALT_LEFT
+# Fn is now Alt
+map key 56 FUNCTION
+"""
 
 DAN_SWE_REPLACE = [
     ("æ", "ö"),
@@ -160,6 +168,11 @@ USINTL_ALTGR_FN_REPLACE_GRAVE = [
     },
 ]
 
+USINTL_SWAP_ALT_FN = [
+    ("alt", "fn"), 
+    ("fn", "alt") 
+]
+
 
 USINTL_POL_PROG_REPLACE = [
     ("u00e9", "u0119"),  # é to ę
@@ -185,16 +198,36 @@ USINTL_POL_PROG_REPLACE = [
 
 GENERATED_LAYOUTS = [
     {
+        # Not used
         NAME: "pro1_qwerty_usaintl_fndead.kcm",
         SOURCE: "pro1_qwerty_usaintl_1.kcm",
         REPLACE: USINTL_ALTGR_REPLACE_APOSTROPHE+
                  USINTL_ALTGR_REPLACE_GRAVE,
     },
     {
-        NAME: "pro1_qwerty_usaintl_fndead_2.kcm",
+        # Produce US International keyboard intended for use with English as primary input language
+        NAME: "pro1_qwerty_usaintl_english_primary.kcm",
         SOURCE: "pro1_qwerty_usaintl_2.kcm",
         REPLACE: USINTL_ALTGR_FN_REPLACE_APOSTROPHE+
                  USINTL_ALTGR_FN_REPLACE_GRAVE,
+    },
+    {
+        # Swap alt and fn modifiers to enable alt+tab task switching using fn hardware key
+        NAME: "pro1_qwerty_usaintl_alt_fn_swap_english_primary.kcm",
+        SOURCE: "pro1_qwerty_usaintl_english_primary.kcm",
+        IS_SOURCE_GENERATED: True,
+        REPLACE: USINTL_SWAP_ALT_FN,
+        REMOVE_KEYCODES: ["TAB"],                 
+        ADD: SWAP_ALT_FN
+    },
+    {
+        # Swap alt and fn modifiers to enable alt+tab task switching using fn hardware key
+        NAME: "pro1_qwerty_usaintl_alt_fn_swap_english_secondary.kcm",
+        SOURCE: "pro1_qwerty_usaintl_2.kcm",
+        IS_SOURCE_GENERATED: False,
+        REPLACE: USINTL_SWAP_ALT_FN,
+        REMOVE_KEYCODES: ["TAB"],
+        ADD: SWAP_ALT_FN
     }
 ]
 
