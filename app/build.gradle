@@ -10,7 +10,17 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 36
-        versionName "1.5.4+development"
+        versionName "1.0.0+development"
+        applicationId "net.slions.hwkbd"
+    }
+
+    flavorDimensions "version"
+
+    productFlavors {
+        FxTecPro1Qwerty {
+            dimension "version"
+            applicationIdSuffix ".FxTecPro1Qwerty"
+        }
     }
 
     sourceSets.main.res.srcDirs += generatedLayoutsResDir

@@ -238,7 +238,7 @@ def expand_replacement(rule):
 
 def generate_layout(layout, target_dir):
     pathlib.Path(target_dir).mkdir(parents=True, exist_ok=True)
-    layout_dir = os.path.join(os.path.dirname(__file__), "finqwerty", "src", "main", "res", "raw")
+    layout_dir = os.path.join(os.path.dirname(__file__), "app", "src", "main", "res", "raw")
     source_dir = target_dir if layout.get(IS_SOURCE_GENERATED) else layout_dir
     with \
     open(os.path.join(source_dir, layout[SOURCE]), 'r') as src, \

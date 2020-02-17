@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
-package net.slions.fxtec.pro1.qwerty;
+package net.slions.hwkbd;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -16,8 +16,8 @@ import android.provider.Settings;
 import java.util.ArrayList;
 import java.util.List;
 
-import static net.slions.fxtec.pro1.qwerty.MainActivity.directModeMinImiSDK;
-import static net.slions.fxtec.pro1.qwerty.MainActivity.directModeMinSDK;
+import static net.slions.hwkbd.MainActivity.directModeMinImiSDK;
+import static net.slions.hwkbd.MainActivity.directModeMinSDK;
 
 public class PrivBootupNotification extends BroadcastReceiver {
     @Override

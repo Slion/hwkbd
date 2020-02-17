@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
-package net.slions.fxtec.pro1.qwerty;
+package net.slions.hwkbd;
 
 import android.content.ComponentName;
 import android.content.Intent;
