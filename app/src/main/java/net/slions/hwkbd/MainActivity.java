@@ -45,13 +45,16 @@ public class MainActivity extends Activity {
      * method settings) */
     private static final int semiModeHardKeybMinSDK = 24;
 
-    private static final String CHANGELOG = "https://github.com/anssih/finqwerty/releases";
-    private static final String WEBSITE = "https://android.onse.fi/finqwerty/";
+    private String CHANGELOG = "https://github.com/slion/hwkbd/releases";
+    private String WEBSITE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         /* TODO: this function is way too long and messy */
         super.onCreate(savedInstanceState);
+
+        WEBSITE = getString(R.string.configure_help_keyone_url);
+
         setContentView(R.layout.activity_main);
 
         final InputManager inputManager = (InputManager) getSystemService(INPUT_SERVICE);
