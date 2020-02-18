@@ -10,7 +10,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 36
-        versionName "1.0.0+development"
+        versionName "0.0.2"
         applicationId "net.slions.hwkbd"
     }
 
