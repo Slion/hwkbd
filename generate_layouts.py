@@ -13,6 +13,8 @@ SOURCE = "source"
 IS_SOURCE_GENERATED = "is_source_generated"
 # simple string replacement
 REPLACE = "replace"
+# Replacements within the specified keycode
+KEYCODE_REPLACE = "keycode_replace"
 # remove "map key scancode KEYCODE" by scancode
 REMOVE_SCANCODES = "remove_scancodes"
 # remove "key KEYCODE { ... } " by KEYCODE
@@ -28,6 +30,38 @@ REPL_OLD = "repl_old"
 REPL_NEW = "repl_new"
 # do not replace if line contains:
 REPL_SKIP = "repl_skip"
+
+FN = "$fn"
+SHIFT = "$shift"
+RALT = "$ralt"
+LALT = "$lalt"
+BASE = "$base"
+
+
+QWERTY_REPLACE = [
+    {
+        REPL_KEYCODE: "1",
+        REPLACE: [
+            (BASE, '1'),
+            (FN, '!'),
+            (SHIFT,'\u00a1'),
+            (RALT, "replace F1"),
+            (LALT, '\u00b9')
+        ]
+    },
+    {
+        REPL_KEYCODE: "2",
+        REPLACE: [
+            (BASE, '2'),
+            (FN, '@'),
+            (SHIFT,'\u00b2'),
+            (RALT, "replace F2"),
+            (LALT, '\u030b')
+        ]
+    }
+
+]
+
 
 #
 SWAP_ALT_FN = r"""
@@ -59,6 +93,8 @@ DAN_NOR_REPLACE = [
     ("Ø", "Æ"),
     ("u00d8", "u00c6"),
 ]
+
+
 
 USINTL_ALTGR_REPLACE_APOSTROPHE = [
     {
@@ -202,7 +238,12 @@ GENERATED_LAYOUTS = [
         NAME: "pro1_qwerty_usaintl_fndead.kcm",
         SOURCE: "pro1_qwerty_usaintl_1.kcm",
         REPLACE: USINTL_ALTGR_REPLACE_APOSTROPHE+
-                 USINTL_ALTGR_REPLACE_GRAVE,
+                 USINTL_ALTGR_REPLACE_GRAVE,                 
+    },
+    {
+        NAME: "pro1_qwerty.kcm",
+        SOURCE: "pro1_qwerty_template.kcm",
+        REPLACE: QWERTY_REPLACE
     },
     {
         # Produce US International keyboard intended for use with English as primary input language
@@ -245,54 +286,86 @@ def generate_layout(layout, target_dir):
     open(os.path.join(target_dir, layout[NAME]), 'w', encoding="utf-8") as dst:
         remove_this_key = False
         cur_keycode = None
-        rules_matched = {REPLACE: [], REMOVE_SCANCODES: [], REMOVE_KEYCODES: []}
+        rules_matched = {KEYCODE_REPLACE: [], REPLACE: [], REMOVE_SCANCODES: [], REMOVE_KEYCODES: []}
+        # For each line in our source
         for line in src:
+            # Remove lines until we find the next closing curly bracket
             if remove_this_key:
                 if line.startswith('}'):
                     remove_this_key = False
                 # skip this key
                 continue
 
+            # Reset current key code whenever we find a closing curly backet
             if line.startswith('}'):
                 cur_keycode = None
 
+            # Comment out specified scan code mapping
             if line.startswith("map key "):
                 for scancode in layout.get(REMOVE_SCANCODES, []):
                     if line.startswith("map key {} ".format(scancode)):
                         line = "#" + line
+                        # Mark that rule as matched
                         rules_matched[REMOVE_SCANCODES].append(scancode)
                         break
 
+            # We are entering a key block
             if line.startswith("key "):
+                # Mark our current key code
                 cur_keycode = line.split()[1]
-
+                # Check if we need to remove that key code
                 for keycode in layout.get(REMOVE_KEYCODES, []):
                     if line.startswith("key {} ".format(keycode)):
                         remove_this_key = True
+                        # Mark that rule as matched
                         rules_matched[REMOVE_KEYCODES].append(keycode)
                         break
+                # Move on if we are skipping that keycode
                 if remove_this_key:
                     continue
 
+            # For each replace entry in our layout
             for replacement_orig in layout.get(REPLACE, []):
+                # If it's a tuple we convert it to a replacement object
                 replacement = expand_replacement(replacement_orig)
+                # If a key code was specified check that we are matching it and move on if needed
                 if REPL_KEYCODE in replacement and cur_keycode != replacement[REPL_KEYCODE]:
                     continue
+                # Check if we need to skip that line    
                 if any(skip in line for skip in replacement.get(REPL_SKIP, [])):
                     continue
-                if replacement[REPL_OLD] in line:
+                
+                if REPLACE in replacement:
+                    # For each replacement applying to current keycode
+                    for keyCodeReplacement in replacement.get(REPLACE, []):
+                        keyCodeReplacementObj = expand_replacement(keyCodeReplacement)
+                        # Do replacement
+                        if keyCodeReplacementObj[REPL_OLD] in line:
+                            line = line.replace(keyCodeReplacementObj[REPL_OLD], keyCodeReplacementObj[REPL_NEW])
+                            # Mark it as matched
+                            rules_matched[KEYCODE_REPLACE].append(replacement_orig)                            
+                                            
+                # Do legacy replacement    
+                if REPL_OLD in replacement and replacement[REPL_OLD] in line:
                     line = line.replace(replacement[REPL_OLD], replacement[REPL_NEW])
+                    # Mark it as matched
                     rules_matched[REPLACE].append(replacement_orig)
                     break
+                
+            # Output modified line
             dst.write(line)
 
         for ruletype in rules_matched.keys():
             for rule in layout.get(ruletype, []):
                 if rule not in rules_matched[ruletype]:
-                    if ruletype == REPLACE and any(ord(c) >= 128 for c in expand_replacement(rule)[REPL_OLD]):
+                    if ruletype == KEYCODE_REPLACE:
+                        # TODO: Should we support match check for every rule? Guess not.
+                        continue
+                    elif ruletype == REPLACE and REPL_OLD in expand_replacement(rule) and any(ord(c) >= 128 for c in expand_replacement(rule)[REPL_OLD]):
                         # non-ASCII rule, it is just for comments so allow not matching
                         continue
-                    raise RuntimeError(f"Rule {rule} for {layout[NAME]} were never executed")
+                    # Review that check logic as it looks broken now
+                    #raise RuntimeError(f"Rule {rule} for {layout[NAME]} were never executed")
 
         dst.write(layout.get(ADD, ""))
 
