@@ -83,83 +83,93 @@ key 2 {
 }
 
 key 3 {
-    label, base:                        '3'
-    fn:                                 '#'
-    ralt:                               replace F3
-    shift:                              '\u00b3'
-    fn+shift, ctrl+fn:                  '\u0304'
+    label:  '3'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key 4 {
-    label, base:                        '4'
-    fn:                                 '$'
-    ralt:                               replace F4
-    shift:                              '\u00a4'
-    fn+shift, ctrl+fn:                  '\u00a3'
+    label:  '4'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key 5 {
-    label, base:                        '5'
-    fn:                                 '%'
-    ralt:                                replace F5
-    shift:                              '\u20ac'
-    fn+shift, ctrl+fn:                  '\u0327'
+    label:  '5'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key 6 {
-    label, base:                        '6'
-    fn:                                '\u0302'
-    ralt:                                replace F6
-    shift:                              '\u00bc'
-    fn+shift, ctrl+fn:                  '^'
+    label:  '6'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key 7 {
-    label, base:                        '7'
-    fn:                                 '&'
-    ralt:                                replace F7
-    shift:                              '\u00bd'
-    fn+shift, ctrl+fn:                  '\u031b'
+    label:  '7'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key 8 {
-    label, base:                        '8'
-    fn:                                 '*'
-    ralt:                                replace F8
-    shift:                              '\u00be'
-    fn+shift, ctrl+fn:                  '\u0328'
+    label:  '8'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key 9 {
-    label, base:                        '9'
-    fn:                                 '('
-    ralt:                                replace F9
-    shift:                              '\u2018'
-    fn+shift, ctrl+fn:                  '\u0306'
+    label:  '9'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key 0 {
-    label, base:                        '0'
-    fn:                                 ')'
-    ralt:                                replace F10
-    shift:                              '\u2019'
-    fn+shift, ctrl+fn:                  '\u030a'
+    label:  '0'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key MINUS {
-    label, base:                        '-'
-    fn:                                 '_'
-    ralt:                                replace F11
-    shift:                              '\u00a5'
-    fn+shift, ctrl+fn:                  '\u0323'
+    label:  '-'
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 key EQUALS {
-    label, base:                        '='
-    fn:                                 '+'
-    ralt:                                replace F12
-    shift:                              '\u00d7'
-    fn+shift, ctrl+fn:                  '\u00f7'
+    label:  '='
+    base:   $base
+    fn:     $fn
+    shift:  $shift
+    lalt:   $lalt
+    ralt:   $ralt
 }
 
 # ROW 2 ###############################################################
