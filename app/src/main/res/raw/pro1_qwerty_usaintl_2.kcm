@@ -1,6 +1,22 @@
 type OVERLAY
 
-# both yellow-arrow keys are 464 (FUNCTION)
+# Find docs about this file format there:
+# https://source.android.com/devices/input/key-character-map-files
+# Key Events are defined there:
+# https://developer.android.com/reference/android/view/KeyEvent.html
+#
+# This configuration is very secific to F(x)tec Pro1 QWERTY hardware keyboard
+# Here are some facts about F(x)tec Pro1 QWERTY hardware keyboard and default layout:
+# - Both Shift keys have the same scan code (54) and are mapped to SHIFT_RIGHT
+# - Both Ctrl keys have the same scan code (29) and are mapped to CTRL_LEFT
+# - Both Fn keys have the same scan code (464) and are mapped to FUNCTION
+# - Alt key scan code is 56 and is mapped to ALT_LEFT
+# - Sym key scan code is 249 and is mapped to SYM, however it does not look functional, is that a bug in the driver?
+# - Sym is not functional as a modifier no matter which one we use. Is that a driver bug?
+
+# Here are some facts about Android 9 behaviour on stock F(x)tec Pro1: 
+# - Note that META_RIGHT and META_LEFT somehow launch the voice assistant so they are not usable as modifiers
+
 
 # orig BACK
 map key 158 ESCAPE
@@ -8,15 +24,32 @@ map key 158 ESCAPE
 # orig SYM but SYM does not do anything at the moment
 # so use as back/wakeup for now
 #map key 249 WAKEUP
+# SYM remap
+map key 249 ASSIST
 
-# Brings up google assistant, why not
-map key 249 META_LEFT
+key ASSIST {
+    ralt: replace POWER
+    # Keyboard backlight on
+    fn: replace F6
+}
+
+# Trying to remap Hall sensor scan code
+# Not working
+#map key 468 SLEEP
+#map key 469 WAKEUP
+#map key 468 F3
+#map key 469 F4
+
+
+# Remap FxTec Home Key
+map key 172 ALT_RIGHT
+
 
 # map alt+sym = F6 (which signals keyboard open), allowing one to press alt+sym
 # to trigger enabling keyboard backlight and screen rotation as sometimes the
 # Pro1 stock OS seems to lose the keyboard open state
 #key WAKEUP {
-#    alt:                                replace F6
+#    lalt:                                replace F6
 #}
 
 #key ALT_LEFT {
@@ -24,15 +57,7 @@ map key 249 META_LEFT
 #    fn: replace PICTSYMBOLS
 #}
 
-key SPACE {
-    label, base: ' '
-    # Character picker dialog
-    alt: '\uef01'
-    fn: replace EXPLORER
-    shift: replace SEARCH
-}
-
-# ROW 1
+# ROW 1 ###############################################################
 
 key ESCAPE {
     base:                               fallback BACK
@@ -42,7 +67,7 @@ key ESCAPE {
 key 1 {
     label, base:                        '1'
     fn:                                 '!'
-    alt:                                replace F1
+    ralt:                                replace F1
     shift:                              '\u00a1'
     fn+shift, ctrl+fn:                  '\u00b9'
 }
@@ -50,7 +75,7 @@ key 1 {
 key 2 {
     label, base:                        '2'
     fn:                                 '@'
-    alt:                                replace F2
+    ralt:                                replace F2
     shift:                              '\u00b2'
     fn+shift, ctrl+fn:                  '\u030b'
 }
@@ -58,7 +83,7 @@ key 2 {
 key 3 {
     label, base:                        '3'
     fn:                                 '#'
-    alt:                                replace F3
+    ralt:                               replace F3
     shift:                              '\u00b3'
     fn+shift, ctrl+fn:                  '\u0304'
 }
@@ -66,7 +91,7 @@ key 3 {
 key 4 {
     label, base:                        '4'
     fn:                                 '$'
-    alt:                                replace F4
+    ralt:                               replace F4
     shift:                              '\u00a4'
     fn+shift, ctrl+fn:                  '\u00a3'
 }
@@ -74,7 +99,7 @@ key 4 {
 key 5 {
     label, base:                        '5'
     fn:                                 '%'
-    alt:                                replace F5
+    ralt:                                replace F5
     shift:                              '\u20ac'
     fn+shift, ctrl+fn:                  '\u0327'
 }
@@ -82,7 +107,7 @@ key 5 {
 key 6 {
     label, base:                        '6'
     fn:                                '\u0302'
-    alt:                                replace F6
+    ralt:                                replace F6
     shift:                              '\u00bc'
     fn+shift, ctrl+fn:                  '^'
 }
@@ -90,7 +115,7 @@ key 6 {
 key 7 {
     label, base:                        '7'
     fn:                                 '&'
-    alt:                                replace F7
+    ralt:                                replace F7
     shift:                              '\u00bd'
     fn+shift, ctrl+fn:                  '\u031b'
 }
@@ -98,7 +123,7 @@ key 7 {
 key 8 {
     label, base:                        '8'
     fn:                                 '*'
-    alt:                                replace F8
+    ralt:                                replace F8
     shift:                              '\u00be'
     fn+shift, ctrl+fn:                  '\u0328'
 }
@@ -106,7 +131,7 @@ key 8 {
 key 9 {
     label, base:                        '9'
     fn:                                 '('
-    alt:                                replace F9
+    ralt:                                replace F9
     shift:                              '\u2018'
     fn+shift, ctrl+fn:                  '\u0306'
 }
@@ -114,7 +139,7 @@ key 9 {
 key 0 {
     label, base:                        '0'
     fn:                                 ')'
-    alt:                                replace F10
+    ralt:                                replace F10
     shift:                              '\u2019'
     fn+shift, ctrl+fn:                  '\u030a'
 }
@@ -122,7 +147,7 @@ key 0 {
 key MINUS {
     label, base:                        '-'
     fn:                                 '_'
-    alt:                                replace F11
+    ralt:                                replace F11
     shift:                              '\u00a5'
     fn+shift, ctrl+fn:                  '\u0323'
 }
@@ -130,12 +155,12 @@ key MINUS {
 key EQUALS {
     label, base:                        '='
     fn:                                 '+'
-    alt:                                replace F12
+    ralt:                                replace F12
     shift:                              '\u00d7'
     fn+shift, ctrl+fn:                  '\u00f7'
 }
 
-# ROW 2
+# ROW 2 ###############################################################
 
 key TAB {
     label, base: '\t'
@@ -147,7 +172,7 @@ key GRAVE {
     base:                               '\u0300'
     shift:                              '\u0303'
     fn:                                 '~'
-    alt:                                '`'
+    lalt:                                '`'
     fn+shift, ctrl+fn:                  '~'
 }
 
@@ -171,9 +196,11 @@ key E {
     label:                              'E'
     base:                               'e'
     shift, capslock:                    'E'
-    alt:                                '\u0301'
+    lalt:                                '\u0301'
     fn:                                 '\u00e9'
     fn+shift, ctrl+fn, fn+capslock:     '\u00c9'
+    # Fx + E launch Email
+    ralt:                               replace ENVELOPE
 }
 
 key R {
@@ -204,7 +231,7 @@ key U {
     label:                              'U'
     base:                               'u'
     shift, capslock:                    'U'
-    alt:                                '\u0308'
+    lalt:                                '\u0308'
     fn:                                 '\u00fa'
     fn+shift, ctrl+fn, fn+capslock:     '\u00da'
 }
@@ -213,7 +240,7 @@ key I {
     label:                              'I'
     base:                               'i'
     shift, capslock:                    'I'
-    alt:                                '\u0302'
+    lalt:                                '\u0302'
     fn:                                 '\u00ed'
     fn+shift, ctrl+fn, fn+capslock:     '\u00cd'
 }
@@ -231,7 +258,9 @@ key P {
     base:                               'p'
     shift, capslock:                    'P'
     fn:                                 '/'
-    alt:                                '\u00f6'
+    lalt:                               '\u00f6'
+    # Fx + P launch Phone book/People/Contacts
+    ralt:                               replace CONTACTS
     fn+shift, ctrl+fn, fn+capslock:     '\u00d6'
 }
 
@@ -239,17 +268,17 @@ key SEMICOLON {
     label:                              ';'
     base:                               ';'
     shift, fn:                          ':'
-    alt:                                '\u00b7'
+    lalt:                                '\u00b7'
     fn+shift, ctrl+fn:                  '\u00b0'
 }
 
-# ROW 3
+# ROW 3 ###############################################################
 
 key BACKSLASH {
     label:                              '\u005c'
     base:                               '\u005c'
     shift, fn:                          '|'
-    alt:                                '\u00ac'
+    lalt:                                '\u00ac'
     fn+shift, ctrl+fn:                  '\u00a6'
 }
 
@@ -259,13 +288,15 @@ key A {
     shift, capslock:                    'A'
     fn:                                 '\u00e1'
     fn+shift, ctrl+fn, fn+capslock:     '\u00c1'
+    # Fx + A launch Agenda/Calendar
+    ralt:                               replace CALENDAR
 }
 
 key S {
     label:                              'S'
     base:                               's'
     shift, capslock:                    'S'
-    alt:                                '\u00df'
+    lalt:                                '\u00df'
     fn:                                 '\u00df'
     fn+shift, ctrl+fn, fn+capslock:     '\u00a7'
 }
@@ -293,7 +324,7 @@ key G {
 key H {
     label:                              'H'
     base:                               'h'
-    alt:                                '\u0303'
+    lalt:                                '\u0303'
     shift, capslock:                    'H'
 }
 
@@ -318,7 +349,7 @@ key L {
     base:                               'l'
     shift, capslock:                    'L'
     fn:                                 '?'
-    alt:                                '\u00f8'
+    lalt:                                '\u00f8'
     fn+shift, ctrl+fn, fn+capslock:     '\u00d8'
 }
 
@@ -327,17 +358,22 @@ key APOSTROPHE {
     base:                               '\u0301'
     shift:                              '\u0308'
     fn:                                 '"'
-    alt:                                '\''
+    lalt:                                '\''
     fn+shift, ctrl+fn:                  '"'
 }
 
-# ROW 4
+key ENTER {
+    base: '\n'
+    ralt: replace MEDIA_PLAY_PAUSE
+}
+
+# ROW 4 ###############################################################
 
 key LEFT_BRACKET {
     label:                              '['
     base:                               '['
     shift, fn:                          '{'
-    alt:                                '\u00ab'
+    lalt:                                '\u00ab'
     fn+shift, ctrl+fn:                  '\u201c'
 }
 
@@ -345,7 +381,7 @@ key RIGHT_BRACKET {
     label:                              ']'
     base:                               ']'
     shift, fn:                          '}'
-    alt:                                '\u00bb'
+    lalt:                                '\u00bb'
     fn+shift, ctrl+fn:                  '\u201d'
 }
 
@@ -367,16 +403,21 @@ key C {
     label:                              'C'
     base:                               'c'
     shift, capslock:                    'C'
-    alt:                                '\u00e7'
-    shift+alt:                          '\u00c7'
+    lalt:                                '\u00e7'
+    shift+lalt:                          '\u00c7'
     fn:                                 '\u00a9'
     fn+shift, ctrl+fn:                  '\u00a2'
+    # Fx + C launch Calculator
+    ralt:                               replace CALCULATOR
+
 }
 
 key V {
     label:                              'V'
     base:                               'v'
     shift, capslock:                    'V'
+    # Fx + V launch Voice Assist
+    ralt:                               replace VOICE_ASSIST
 }
 
 key B {
@@ -389,7 +430,7 @@ key N {
     label:                              'N'
     base:                               'n'
     shift, capslock:                    'N'
-    alt:                                '\u0303'
+    lalt:                                '\u0303'
     fn:                                 '\u00f1'
     fn+shift, ctrl+fn, fn+capslock:     '\u00d1'
 }
@@ -400,43 +441,71 @@ key M {
     shift, capslock:                    'M'
     fn:                                 '\u00b5'
     fn+shift, ctrl+fn:                  '\u00b5'
+    # Fx + M launch Music
+    ralt:                               replace MUSIC
 }
 
 key COMMA {
     label:                              ','
     base:                               ','
     shift, fn:                          '<'
-    alt:                                '\u00e7'
+    lalt:                                '\u00e7'
     fn+shift, ctrl+fn, fn+capslock:     '\u00c7'
+    ralt:                               replace MEDIA_REWIND    
 }
 
 key PERIOD {
     label:                              '.'
     base:                               '.'
     shift, fn:                          '>'
-    alt:                                 '\u0307'
+    lalt:                               '\u0307'
     fn+shift, ctrl+fn:                  '\u030c'
+    ralt:                               replace MEDIA_FAST_FORWARD
 }
-
-# Direction keys
 
 key DPAD_UP {
-    fn:                                 replace PAGE_UP
-    # Turn on keyboard backlight
-    alt:                                replace F6    
+    fn:         replace PAGE_UP
+    lalt:       replace BRIGHTNESS_UP    
+    ralt:       replace VOLUME_UP
 }
 
-key DPAD_DOWN {
-    fn:                                 replace PAGE_DOWN
-    alt:                                replace POWER
+# ROW 5 ###############################################################
+
+key SPACE {
+    label, base:    ' '
+    # Character picker dialog
+    lalt:           '\uef01'
+    # No effects on stock
+    #lalt:          replace ALL_APPS
+    fn: replace SEARCH
+    shift:          replace SEARCH
+    # Fx + SPACE launch Web Browser
+    ralt:           replace EXPLORER
 }
 
 key DPAD_LEFT {
-    fn:                                 replace MOVE_HOME
-    alt:                                replace BACK
+    fn:         replace MOVE_HOME
+    lalt:       replace BACK
+    ralt:       replace MEDIA_PREVIOUS                         
+}
+
+key DPAD_DOWN {
+    fn:         replace PAGE_DOWN
+    lalt:       replace BRIGHTNESS_DOWN
+    ralt:       replace VOLUME_DOWN
 }
 
 key DPAD_RIGHT {
-    fn:                                 replace MOVE_END
-    alt:                                replace FORWARD
+    fn:     replace MOVE_END
+    lalt:   replace FORWARD
+    ralt:   replace MEDIA_NEXT                             
 }
+
+# Experiment for smart case open and close detection
+#key F3 {
+#    fn: replace SLEEP
+#}
+
+#key F4 {
+#    fn: replace WAKEUP
+#}

@@ -169,8 +169,8 @@ USINTL_ALTGR_FN_REPLACE_GRAVE = [
 ]
 
 USINTL_SWAP_ALT_FN = [
-    ("alt", "fn"), 
-    ("fn", "alt") 
+    ("lalt", "fn"),
+    ("fn", "lalt")
 ]
 
 
