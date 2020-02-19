@@ -38,29 +38,59 @@ LALT = "$lalt"
 BASE = "$base"
 
 
-QWERTY_REPLACE = [
+REPLACE_PRINTED_QWERTY = [
     {
         REPL_KEYCODE: "1",
         REPLACE: [
-            (BASE, '1'),
-            (FN, '!'),
-            (SHIFT,'\u00a1'),
-            (RALT, "replace F1"),
-            (LALT, '\u00b9')
+            (BASE, r"'1'"),
+            (FN, r"'!'"),
         ]
     },
     {
         REPL_KEYCODE: "2",
         REPLACE: [
-            (BASE, '2'),
-            (FN, '@'),
-            (SHIFT,'\u00b2'),
-            (RALT, "replace F2"),
-            (LALT, '\u030b')
+            (BASE, r"'2'"),
+            (FN, r"'@'"),
+        ]
+    }
+]
+
+
+REPLACE_FX_QWERTY = [
+    {
+        REPL_KEYCODE: "1",
+        REPLACE: [
+            (RALT, r"replace F1"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "2",
+        REPLACE: [
+            (RALT, r"replace F2"),
+        ]
+    }
+]
+
+
+
+REPLACE_INTERNATIONAL_QWERTY = [
+    {
+        REPL_KEYCODE: "1",
+        REPLACE: [
+            (SHIFT,r"'\u00a1'"),            
+            (LALT, r"'\u00b9'")
+        ]
+    },
+    {
+        REPL_KEYCODE: "2",
+        REPLACE: [
+            (SHIFT,r"'\u00b2'"),            
+            (LALT, r"'\u030b'")
         ]
     }
 
 ]
+
 
 
 #
@@ -234,40 +264,32 @@ USINTL_POL_PROG_REPLACE = [
 
 GENERATED_LAYOUTS = [
     {
-        # Not used
-        NAME: "pro1_qwerty_usaintl_fndead.kcm",
-        SOURCE: "pro1_qwerty_usaintl_1.kcm",
-        REPLACE: USINTL_ALTGR_REPLACE_APOSTROPHE+
-                 USINTL_ALTGR_REPLACE_GRAVE,                 
-    },
-    {
-        NAME: "pro1_qwerty.kcm",
+        # Process our basic template expanding printed Qwerty character
+        NAME: "pro1_qwerty_printed.kcm",
         SOURCE: "pro1_qwerty_template.kcm",
-        REPLACE: QWERTY_REPLACE
-    },
+        REPLACE: REPLACE_PRINTED_QWERTY
+    },    
     {
-        # Produce US International keyboard intended for use with English as primary input language
-        NAME: "pro1_qwerty_usaintl_english_primary.kcm",
-        SOURCE: "pro1_qwerty_usaintl_2.kcm",
-        REPLACE: USINTL_ALTGR_FN_REPLACE_APOSTROPHE+
-                 USINTL_ALTGR_FN_REPLACE_GRAVE,
+        # Process our printed template expanding Fx characters
+        NAME: "pro1_qwerty_fxed.kcm",        
+        SOURCE: "pro1_qwerty_printed.kcm",
+        IS_SOURCE_GENERATED: True,
+        REPLACE: REPLACE_FX_QWERTY
+    },    
+    {
+        # Process Fxed template expanding international characters 
+        NAME: "pro1_qwerty_international.kcm",        
+        SOURCE: "pro1_qwerty_fxed.kcm",
+        IS_SOURCE_GENERATED: True,
+        REPLACE: REPLACE_INTERNATIONAL_QWERTY
     },
     {
         # Swap alt and fn modifiers to enable alt+tab task switching using fn hardware key
-        NAME: "pro1_qwerty_usaintl_alt_fn_swap_english_primary.kcm",
-        SOURCE: "pro1_qwerty_usaintl_english_primary.kcm",
+        NAME: "pro1_qwerty_international_swapped.kcm",
+        SOURCE: "pro1_qwerty_international.kcm",
         IS_SOURCE_GENERATED: True,
         REPLACE: USINTL_SWAP_ALT_FN,
         REMOVE_KEYCODES: ["TAB"],                 
-        ADD: SWAP_ALT_FN
-    },
-    {
-        # Swap alt and fn modifiers to enable alt+tab task switching using fn hardware key
-        NAME: "pro1_qwerty_usaintl_alt_fn_swap_english_secondary.kcm",
-        SOURCE: "pro1_qwerty_usaintl_2.kcm",
-        IS_SOURCE_GENERATED: False,
-        REPLACE: USINTL_SWAP_ALT_FN,
-        REMOVE_KEYCODES: ["TAB"],
         ADD: SWAP_ALT_FN
     }
 ]
