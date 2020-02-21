@@ -1,8 +1,6 @@
 
 from consts import *
 
-# Interrestingly it looks like we don't need to specify the capslock, weird.
-
 REPLACE_PRINTED_QWERTY = [
 
 # ROW 1 ###############################################################
@@ -94,8 +92,7 @@ REPLACE_PRINTED_QWERTY = [
     {    
         REPL_KEYCODE: "TAB",
         REPLACE: [
-            (BASE, r"'\t'"),
-            (FN, r"replace APP_SWITCH"),
+            (BASE, r"'\t'"),            
         ]
     },
     {    
@@ -381,6 +378,11 @@ REPLACE_PRINTED_QWERTY = [
         ]
     },
 # ROW 5 ###############################################################
+    {    
+        REPL_KEYCODE: "ASSIST", #SYM
+        REPLACE: [
+        ]
+    },    
     {    
         REPL_KEYCODE: "SPACE",
         REPLACE: [

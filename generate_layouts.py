@@ -12,6 +12,8 @@ import sys
 from consts import *
 from qwerty_printed import *
 from qwerty_fx import *
+from qwerty_fn import *
+from qwerty_fn_custom import *
 from qwerty_international import *
 
 
@@ -186,42 +188,26 @@ USINTL_POL_PROG_REPLACE = [
 
 GENERATED_LAYOUTS = [
     {
-        # Process our basic template expanding printed Qwerty character
+        # Process our printed template expanding Fx characters
         INPUT: "pro1_qwerty_template.kcm",
-        OUTPUT: "pro1_qwerty_printed.kcm",        
-        REPLACE: REPLACE_PRINTED_QWERTY
-    },    
-    {
-        # Process our printed template expanding Fx characters
-        INPUT: "pro1_qwerty_printed.kcm",
-        OUTPUT: "pro1_qwerty_fxed.kcm",                
-        IS_SOURCE_GENERATED: True,
-        REPLACE: REPLACE_FX_QWERTY,
-        ADD: REMAP_FX
-    },
-    {
-        # Process our printed template expanding Fx characters
-        INPUT: "pro1_qwerty_fxed.kcm",
         OUTPUT: "pro1_qwerty_us.kcm",                
-        IS_SOURCE_GENERATED: True,
-        REPLACE: CLEANUP_TEMPLATE,
-    },    
-    {
-        # Process Fxed template expanding international characters 
-        INPUT: "pro1_qwerty_fxed.kcm",
-        OUTPUT: "pro1_qwerty_international.kcm",                
-        IS_SOURCE_GENERATED: True,
-        REPLACE: REPLACE_INTERNATIONAL_QWERTY
+        REPLACE:    REPLACE_PRINTED_QWERTY+
+                    QWERTY_FN_PRINTED+
+                    QWERTY_FN_CUSTOM+
+                    REPLACE_FX_QWERTY+
+                    CLEANUP_TEMPLATE,
+        ADD: REMAP_FX                    
     },
-    {
+
+    #{
         # Swap alt and fn modifiers to enable alt+tab task switching using fn hardware key
-        INPUT: "pro1_qwerty_international.kcm",
-        OUTPUT: "pro1_qwerty_international_swapped.kcm",        
-        IS_SOURCE_GENERATED: True,
-        REPLACE: USINTL_SWAP_ALT_FN,
-        REMOVE_KEYCODES: ["TAB"],                 
-        ADD: SWAP_ALT_FN
-    }
+    #    INPUT: "pro1_qwerty_international.kcm",
+    #    OUTPUT: "pro1_qwerty_international_swapped.kcm",        
+    #    IS_SOURCE_GENERATED: True,
+    #    REPLACE: USINTL_SWAP_ALT_FN,
+    #    REMOVE_KEYCODES: ["TAB"],                 
+    #    ADD: SWAP_ALT_FN
+    #}    
 ]
 
 def expand_replacement(rule):
