@@ -45,7 +45,7 @@ REPLACE_PRINTED_QWERTY = [
         REPL_KEYCODE: "6",
         REPLACE: [
             (BASE, r"'6'"),
-            (FN, r"'\u0302'"),
+            (FN, r"'^'"),
         ]
     },
     {
@@ -110,6 +110,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'q'"),
             (SHIFT, r"'Q'"),
+            (CAPSLOCK, r"'Q'"),            
         ]
     },
     {
@@ -117,6 +118,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'w'"),
             (SHIFT, r"'W'"),
+            (CAPSLOCK, r"'W'"),
         ]
     },
     {
@@ -124,6 +126,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'e'"),
             (SHIFT, r"'E'"),
+            (CAPSLOCK, r"'E'"),
         ]
     },
     {
@@ -131,6 +134,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'r'"),
             (SHIFT, r"'R'"),
+            (CAPSLOCK, r"'R'"),
         ]
     },
     {
@@ -138,6 +142,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'t'"),
             (SHIFT, r"'T'"),
+            (CAPSLOCK, r"'T'"),
         ]
     },
     {
@@ -145,6 +150,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'y'"),
             (SHIFT, r"'Y'"),
+            (CAPSLOCK, r"'Y'"),
         ]
     },
     {
@@ -152,6 +158,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'u'"),
             (SHIFT, r"'U'"),
+            (CAPSLOCK, r"'U'"),
         ]
     },
     {
@@ -159,6 +166,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'i'"),
             (SHIFT, r"'I'"),
+            (CAPSLOCK, r"'I'"),
         ]
     },
     {
@@ -166,6 +174,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'o'"),
             (SHIFT, r"'O'"),
+            (CAPSLOCK, r"'O'"),
         ]
     },
     {
@@ -174,6 +183,7 @@ REPLACE_PRINTED_QWERTY = [
             (BASE, r"'p'"),
             (FN, r"'/'"),
             (SHIFT, r"'P'"),
+            (CAPSLOCK, r"'P'"),
         ]
     },
     {
@@ -196,6 +206,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'a'"),
             (SHIFT, r"'A'"),
+            (CAPSLOCK, r"'A'"),
             #(LALT, r"'à'"),
         ]
     },
@@ -204,6 +215,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'s'"),
             (SHIFT, r"'S'"),
+            (CAPSLOCK, r"'S'"),
             #(LALT, r"'ß'"),
         ]
     },
@@ -212,6 +224,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'d'"),
             (SHIFT, r"'D'"),
+            (CAPSLOCK, r"'D'"),
         ]
     },
     {
@@ -219,6 +232,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'f'"),
             (SHIFT, r"'F'"),
+            (CAPSLOCK, r"'F'"),
         ]
     },
     {
@@ -226,6 +240,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'g'"),
             (SHIFT, r"'G'"),
+            (CAPSLOCK, r"'G'"),
         ]
     },
     {
@@ -233,6 +248,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'h'"),
             (SHIFT, r"'H'"),
+            (CAPSLOCK, r"'H'"),
         ]
     },
     {
@@ -240,6 +256,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'j'"),
             (SHIFT, r"'J'"),
+            (CAPSLOCK, r"'J'"),
         ]
     },
     {
@@ -247,13 +264,16 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'k'"),
             (SHIFT, r"'K'"),
+            (CAPSLOCK, r"'K'"),
         ]
     },
     {
         REPL_KEYCODE: "L",
         REPLACE: [
             (BASE, r"'l'"),
+            (FN, r"'?'"),
             (SHIFT, r"'L'"),
+            (CAPSLOCK, r"'L'"),
         ]
     },
     {
@@ -290,6 +310,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'z'"),
             (SHIFT, r"'Z'"),
+            (CAPSLOCK, r"'Z'"),
         ]
     },
     {
@@ -297,6 +318,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'x'"),
             (SHIFT, r"'X'"),
+            (CAPSLOCK, r"'X'"),
         ]
     },    
     {
@@ -304,6 +326,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'c'"),
             (SHIFT, r"'C'"),
+            (CAPSLOCK, r"'C'"),
         ]
     },
     {
@@ -311,6 +334,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'v'"),
             (SHIFT, r"'V'"),
+            (CAPSLOCK, r"'V'"),
         ]
     },
     {
@@ -318,6 +342,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'b'"),
             (SHIFT, r"'B'"),
+            (CAPSLOCK, r"'B'"),
         ]
     },
     {
@@ -325,6 +350,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'n'"),
             (SHIFT, r"'N'"),
+            (CAPSLOCK, r"'N'"),
         ]
     },
     {
@@ -332,6 +358,7 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'m'"),
             (SHIFT, r"'M'"),
+            (CAPSLOCK, r"'M'"),
         ]
     },
     {
