@@ -202,7 +202,7 @@ GENERATED_LAYOUTS = [
     {
         # Process our printed template expanding Fx characters
         INPUT: "pro1_qwerty_fxed.kcm",
-        OUTPUT: "pro1_qwerty_fx_overlay.kcm",                
+        OUTPUT: "pro1_qwerty_us.kcm",                
         IS_SOURCE_GENERATED: True,
         REPLACE: CLEANUP_TEMPLATE,
     },    
