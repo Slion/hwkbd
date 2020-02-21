@@ -14,11 +14,12 @@ from qwerty_printed import *
 from qwerty_fx import *
 from qwerty_fn import *
 from qwerty_fn_custom import *
+from qwerty_alt import *
 from qwerty_international import *
 
 
 #
-SWAP_ALT_FN = r"""
+REMAP_SWAP_ALT_FN = r"""
 # Swap alt and fn
 # Alt is now Fn
 map key 464 ALT_LEFT
@@ -26,164 +27,19 @@ map key 464 ALT_LEFT
 map key 56 FUNCTION
 """
 
-DAN_SWE_REPLACE = [
-    ("æ", "ö"),
-    ("u00e6", "u00f6"),
-    ("Æ", "Ö"),
-    ("u00c6", "u00d6"),
-    ("ø", "ä"),
-    ("u00f8", "u00e4"),
-    ("Ø", "Ä"),
-    ("u00d8", "u00c4"),
-]
 
-DAN_NOR_REPLACE = [
-    ("æ", "ø"),
-    ("u00e6", "u00f8"),
-    ("Æ", "Ø"),
-    ("u00c6", "u00d8"),
-    ("ø", "æ"),
-    ("u00f8", "u00e6"),
-    ("Ø", "Æ"),
-    ("u00d8", "u00c6"),
-]
-
-
-
-USINTL_ALTGR_REPLACE_APOSTROPHE = [
-    {
-        REPL_KEYCODE: "APOSTROPHE",
-        REPL_OLD: r"'\''",
-        REPL_NEW: r"'\u0301'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "APOSTROPHE",
-        REPL_OLD: "'\"'",
-        REPL_NEW: r"'\u0308'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "APOSTROPHE",
-        REPL_OLD: r"'\u0301'",
-        REPL_NEW: r"'\''",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "APOSTROPHE",
-        REPL_OLD: r"'\u0308'",
-        REPL_NEW: "'\"'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-]
-
-USINTL_ALTGR_REPLACE_GRAVE = [
-    {
-        REPL_KEYCODE: "GRAVE",
-        REPL_OLD: r"'`'",
-        REPL_NEW: r"'\u0300'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "GRAVE",
-        REPL_OLD: "'~'",
-        REPL_NEW: r"'\u0303'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "GRAVE",
-        REPL_OLD: r"'\u0300'",
-        REPL_NEW: r"'`'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "GRAVE",
-        REPL_OLD: r"'\u0303'",
-        REPL_NEW: "'~'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-]
-
-USINTL_ALTGR_FN_REPLACE_APOSTROPHE = [
-    {
-        REPL_KEYCODE: "APOSTROPHE",
-        REPL_OLD: r"'\''",
-        REPL_NEW: r"'\u0301'",
-        REPL_SKIP: ["fn:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "APOSTROPHE",
-        REPL_OLD: "'\"'",
-        REPL_NEW: r"'\u0308'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "APOSTROPHE",
-        REPL_OLD: r"'\u0301'",
-        REPL_NEW: r"'\''",
-        REPL_SKIP: ["fn:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "APOSTROPHE",
-        REPL_OLD: r"'\u0308'",
-        REPL_NEW: "'\"'",
-        REPL_SKIP: ["fn:", "label:"],
-    },
-]
-
-USINTL_ALTGR_FN_REPLACE_GRAVE = [
-    {
-        REPL_KEYCODE: "GRAVE",
-        REPL_OLD: r"'`'",
-        REPL_NEW: r"'\u0300'",
-        REPL_SKIP: ["fn:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "GRAVE",
-        REPL_OLD: "'~'",
-        REPL_NEW: r"'\u0303'",
-        REPL_SKIP: ["alt:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "GRAVE",
-        REPL_OLD: r"'\u0300'",
-        REPL_NEW: r"'`'",
-        REPL_SKIP: ["fn:", "label:"],
-    },
-    {
-        REPL_KEYCODE: "GRAVE",
-        REPL_OLD: r"'\u0303'",
-        REPL_NEW: "'~'",
-        REPL_SKIP: ["fn:", "label:"],
-    },
-]
-
-USINTL_SWAP_ALT_FN = [
+SWAP_ALT_FN = [
     ("lalt", "fn"),
     ("fn", "lalt")
 ]
 
-
-USINTL_POL_PROG_REPLACE = [
-    ("u00e9", "u0119"),  # é to ę
-    ("u00c9", "u0118"),  # É to Ę
-    ("u00e1", "u0105"),  # á to ą
-    ("u00c1", "u0104"),  # Á to Ą
+SWAP_TAB_FIX = [
     {
-        REPL_KEYCODE: "S",
-        REPL_OLD: r"'\u00df'",
-        REPL_NEW: r"'\u015b'",
-        REPL_SKIP: ["alt:"],
-    },  # ß to ś (except on alt modifier)
-    ("u00a7", "u015a"),  # § to Ś
-    ("u00f8", "u0142"),  # ø to ł
-    ("u00d8", "u0141"),  # Ø to Ł
-    ("u00e6", "u017c"),  # æ to ż
-    ("u00c6", "u017b"),  # Æ to Ż
-    ("u00a9", "u0107"),  # © to ć
-    ("u00a2", "u0106"),  # ¢ to Ć
-    ("u00f1", "u0144"),  # ñ to ń
-    ("u00d1", "u0143"),  # Ñ to Ń
+        REPL_KEYCODE: "TAB",
+        REPLACE: [
+            ("lalt:", "fn:"),
+        ]
+    },
 ]
 
 GENERATED_LAYOUTS = [
@@ -195,8 +51,25 @@ GENERATED_LAYOUTS = [
                     QWERTY_FN_PRINTED+
                     QWERTY_FN_CUSTOM+
                     REPLACE_FX_QWERTY+
+                    QWERTY_ALT+
                     CLEANUP_TEMPLATE,
         ADD: REMAP_FX                    
+    },
+    {
+        # Process our printed template expanding Fx characters
+        INPUT: "pro1_qwerty_us.kcm",
+        OUTPUT: "pro1_qwerty_us_fn_tab_tmp.kcm", 
+        IS_SOURCE_GENERATED: True,               
+        REPLACE: SWAP_ALT_FN,  
+        ADD: REMAP_SWAP_ALT_FN                    
+    },
+
+    {
+        # Process our printed template expanding Fx characters
+        INPUT: "pro1_qwerty_us_fn_tab_tmp.kcm",
+        OUTPUT: "pro1_qwerty_us_fn_tab.kcm", 
+        IS_SOURCE_GENERATED: True,               
+        REPLACE: SWAP_TAB_FIX,  
     },
 
     #{

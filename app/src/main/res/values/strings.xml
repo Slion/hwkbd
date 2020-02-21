@@ -1,17 +1,9 @@
 <resources>
     <string name="app_name">Qwerty Keyboard Layouts for F(x)tec Pro1</string>
 
-    <!--
-    <string name="pro1_qwerty_usaintl_2">F(x)tec Pro1 Qwerty - International</string>
-    <string name="pro1_qwerty_usaintl_english_primary">F(x)tec Pro1 Qwerty - International - English primary</string>
-
-    <string name="pro1_qwerty_usaintl_alt_fn_swap_english_primary">F(x)tec Pro1 Qwerty - International - Alt/Fn swap - English primary</string>
-    <string name="pro1_qwerty_usaintl_alt_fn_swap_english_secondary">F(x)tec Pro1 Qwerty - International - Alt/Fn swap</string>
--->
-    <string name="pro1_qwerty_international">F(x)tec Pro1 Qwerty - International</string>
-    <string name="pro1_qwerty_international_swapped">F(x)tec Pro1 Qwerty - International - Alt/Fn swapped</string>
-    <string name="pro1_qwerty_fx_overlay">F(x)tec Pro1 Qwerty - Fx Overlay</string>
+    <!-- -->
     <string name="pro1_qwerty_us">F(x)tec Pro1 Qwerty - US</string>
+    <string name="pro1_qwerty_us_fn_tab">F(x)tec Pro1 Qwerty - US - Fn+Tab</string>
 
     <string name="empty_layout">F(x)tec Pro1 Qwerty - Default</string>
 

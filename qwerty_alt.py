@@ -1,407 +1,323 @@
 
 from consts import *
 
-REPLACE_PRINTED_QWERTY = [
+QWERTY_ALT = [
 
 # ROW 1 ###############################################################
     {
         REPL_KEYCODE: "1",
         REPLACE: [
-            (BASE, r"'1'"),
-            (FN, r"'!'"),
+            #(FN, r"'!'"),
         ]
     },
     {
         REPL_KEYCODE: "2",
         REPLACE: [
-            (BASE, r"'2'"),
-            (FN, r"'@'"),
+            #(FN, r"'@'"),
         ]
     },
     {
         REPL_KEYCODE: "3",
         REPLACE: [
-            (BASE, r"'3'"),
-            (FN, r"'#'"),
+            #(FN, r"'#'"),
         ]
     },
     {
         REPL_KEYCODE: "4",
         REPLACE: [
-            (BASE, r"'4'"),
-            (FN, r"'$'"),
+            #(FN, r"'$'"),
         ]
     },
     {
         REPL_KEYCODE: "5",
         REPLACE: [
-            (BASE, r"'5'"),
-            (FN, r"'%'"),
+            #(FN, r"'%'"),
         ]
     },
     {
         REPL_KEYCODE: "6",
         REPLACE: [
-            (BASE, r"'6'"),
-            (FN, r"'^'"),
+            # Circumflex accent dead key 
+            (LALT, r"'\u0302'"),
         ]
     },
     {
         REPL_KEYCODE: "7",
         REPLACE: [
-            (BASE, r"'7'"),
-            (FN, r"'&'"),
+            #(FN, r"'&'"),
         ]
     },
     {
         REPL_KEYCODE: "8",
         REPLACE: [
-            (BASE, r"'8'"),
-            (FN, r"'*'"),
+            #(FN, r"'*'"),
         ]
     },
     {
         REPL_KEYCODE: "9",
         REPLACE: [
-            (BASE, r"'9'"),
-            (FN, r"'('"),
+            #(FN, r"'('"),
         ]
     },
     {
         REPL_KEYCODE: "0",
         REPLACE: [
-            (BASE, r"'0'"),
-            (FN, r"')'"),
+            #(FN, r"')'"),
         ]
     },
     {
         REPL_KEYCODE: "MINUS",
         REPLACE: [
-            (BASE, r"'-'"),
-            (FN, r"'_'"),
+            #(FN, r"'_'"),
         ]
     },
     {
         REPL_KEYCODE: "EQUALS",
         REPLACE: [
-            (BASE, r"'='"),
-            (FN, r"'+'"),
+            #(FN, r"'+'"),
         ]
     },
 # ROW 2 ###############################################################
     {    
         REPL_KEYCODE: "TAB",
         REPLACE: [
-            (BASE, r"'\t'"),            
         ]
     },
     {    
         REPL_KEYCODE: "GRAVE",
-        REPLACE: [
-            (BASE, r"'`'"),
-            (FN, r"'~'"),
+        REPLACE: [           
+            # Grave accent dead key 
+            (LALT, r"'\u0300'"),
         ]
     },
     {
         REPL_KEYCODE: "Q",
         REPLACE: [
-            (BASE, r"'q'"),
-            (SHIFT, r"'Q'"),
-            (CAPSLOCK, r"'Q'"),            
         ]
     },
     {
         REPL_KEYCODE: "W",
         REPLACE: [
-            (BASE, r"'w'"),
-            (SHIFT, r"'W'"),
-            (CAPSLOCK, r"'W'"),
         ]
     },
     {
         REPL_KEYCODE: "E",
         REPLACE: [
-            (BASE, r"'e'"),
-            (SHIFT, r"'E'"),
-            (CAPSLOCK, r"'E'"),
+            # Accute accent dead key 
+            (LALT, r"'\u0301'"),
         ]
     },
     {
         REPL_KEYCODE: "R",
         REPLACE: [
-            (BASE, r"'r'"),
-            (SHIFT, r"'R'"),
-            (CAPSLOCK, r"'R'"),
         ]
     },
     {
         REPL_KEYCODE: "T",
         REPLACE: [
-            (BASE, r"'t'"),
-            (SHIFT, r"'T'"),
-            (CAPSLOCK, r"'T'"),
         ]
     },
     {
         REPL_KEYCODE: "Y",
         REPLACE: [
-            (BASE, r"'y'"),
-            (SHIFT, r"'Y'"),
-            (CAPSLOCK, r"'Y'"),
         ]
     },
     {
         REPL_KEYCODE: "U",
         REPLACE: [
-            (BASE, r"'u'"),
-            (SHIFT, r"'U'"),
-            (CAPSLOCK, r"'U'"),
+            # Umlaut dead key 
+            (LALT, r"'\u0308'"),
         ]
     },
     {
         REPL_KEYCODE: "I",
         REPLACE: [
-            (BASE, r"'i'"),
-            (SHIFT, r"'I'"),
-            (CAPSLOCK, r"'I'"),
         ]
     },
     {
         REPL_KEYCODE: "O",
         REPLACE: [
-            (BASE, r"'o'"),
-            (SHIFT, r"'O'"),
-            (CAPSLOCK, r"'O'"),
         ]
     },
     {
         REPL_KEYCODE: "P",
         REPLACE: [
-            (BASE, r"'p'"),
-            (FN, r"'/'"),
-            (SHIFT, r"'P'"),
-            (CAPSLOCK, r"'P'"),
+            #(FN, r"'/'"),
         ]
     },
     {
         REPL_KEYCODE: "SEMICOLON",
         REPLACE: [
-            (BASE, r"';'"),
-            (FN, r"':'"),
+            #(FN, r"':'"),
         ]
     },
 # ROW 3 ###############################################################
     {    
         REPL_KEYCODE: "BACKSLASH",
         REPLACE: [
-            (BASE, r"'\u005c'"),
-            (FN, r"'|'"),
+            #(FN, r"'|'"),
         ]
     },
     {
         REPL_KEYCODE: "A",
         REPLACE: [
-            (BASE, r"'a'"),
-            (SHIFT, r"'A'"),
-            (CAPSLOCK, r"'A'"),
-            #(LALT, r"'à'"),
+            # à
+            (LALT, r"'\u00E0'"),
         ]
     },
     {
         REPL_KEYCODE: "S",
         REPLACE: [
-            (BASE, r"'s'"),
-            (SHIFT, r"'S'"),
-            (CAPSLOCK, r"'S'"),
-            #(LALT, r"'ß'"),
+            # ß
+            (LALT, r"'\u00df'"),
         ]
     },
     {
         REPL_KEYCODE: "D",
         REPLACE: [
-            (BASE, r"'d'"),
-            (SHIFT, r"'D'"),
-            (CAPSLOCK, r"'D'"),
         ]
     },
     {
         REPL_KEYCODE: "F",
         REPLACE: [
-            (BASE, r"'f'"),
-            (SHIFT, r"'F'"),
-            (CAPSLOCK, r"'F'"),
         ]
     },
     {
         REPL_KEYCODE: "G",
         REPLACE: [
-            (BASE, r"'g'"),
-            (SHIFT, r"'G'"),
-            (CAPSLOCK, r"'G'"),
         ]
     },
     {
         REPL_KEYCODE: "H",
         REPLACE: [
-            (BASE, r"'h'"),
-            (SHIFT, r"'H'"),
-            (CAPSLOCK, r"'H'"),
         ]
     },
     {
         REPL_KEYCODE: "J",
         REPLACE: [
-            (BASE, r"'j'"),
-            (SHIFT, r"'J'"),
-            (CAPSLOCK, r"'J'"),
         ]
     },
     {
         REPL_KEYCODE: "K",
         REPLACE: [
-            (BASE, r"'k'"),
-            (SHIFT, r"'K'"),
-            (CAPSLOCK, r"'K'"),
         ]
     },
     {
         REPL_KEYCODE: "L",
         REPLACE: [
-            (BASE, r"'l'"),
-            (FN, r"'?'"),
-            (SHIFT, r"'L'"),
-            (CAPSLOCK, r"'L'"),
+            #(FN, r"'?'"),
         ]
     },
     {
         REPL_KEYCODE: "APOSTROPHE",
         REPLACE: [
-            (BASE, r"'\''"),
-            (FN, r"'\"'"),
-            (SHIFT, r"'\u0301'"),            
+            #(FN, r"'\"'"),
+            # Umlaut dead key 
+            (LALT, r"'\u0308'"),
         ]
     },
     {
         REPL_KEYCODE: "ENTER",
         REPLACE: [
-            (BASE, r"'\n'"),
         ]
     },
 # ROW 4 ###############################################################
     {    
         REPL_KEYCODE: "LEFT_BRACKET",
         REPLACE: [
-            (BASE, r"'['"),
-            (FN, r"'{'"),
+            #(FN, r"'{'"),
         ]
     },
     {
         REPL_KEYCODE: "RIGHT_BRACKET",
         REPLACE: [
-            (BASE, r"']'"),
-            (FN, r"'}'"),
+            #(FN, r"'}'"),
         ]
     },
     {
         REPL_KEYCODE: "Z",
         REPLACE: [
-            (BASE, r"'z'"),
-            (SHIFT, r"'Z'"),
-            (CAPSLOCK, r"'Z'"),
         ]
     },
     {
         REPL_KEYCODE: "X",
         REPLACE: [
-            (BASE, r"'x'"),
-            (SHIFT, r"'X'"),
-            (CAPSLOCK, r"'X'"),
         ]
     },    
     {
         REPL_KEYCODE: "C",
         REPLACE: [
-            (BASE, r"'c'"),
-            (SHIFT, r"'C'"),
-            (CAPSLOCK, r"'C'"),
+            # ç
+            (LALT, r"'\u00E7'"),
         ]
     },
     {
         REPL_KEYCODE: "V",
         REPLACE: [
-            (BASE, r"'v'"),
-            (SHIFT, r"'V'"),
-            (CAPSLOCK, r"'V'"),
         ]
     },
     {
         REPL_KEYCODE: "B",
         REPLACE: [
-            (BASE, r"'b'"),
-            (SHIFT, r"'B'"),
-            (CAPSLOCK, r"'B'"),
         ]
     },
     {
         REPL_KEYCODE: "N",
         REPLACE: [
-            (BASE, r"'n'"),
-            (SHIFT, r"'N'"),
-            (CAPSLOCK, r"'N'"),
         ]
     },
     {
         REPL_KEYCODE: "M",
         REPLACE: [
-            (BASE, r"'m'"),
-            (SHIFT, r"'M'"),
-            (CAPSLOCK, r"'M'"),
         ]
     },
     {
         REPL_KEYCODE: "COMMA",
         REPLACE: [
-            (BASE, r"','"),
-            (FN, r"'<'"),
+            #(FN, r"'<'"),
         ]
     },
     {
         REPL_KEYCODE: "PERIOD",
         REPLACE: [
-            (BASE, r"'.'"),
-            (FN, r"'>'"),
+            #(FN, r"'>'"),
         ]
     },
     {
         REPL_KEYCODE: "DPAD_UP",
         REPLACE: [
+            (LALT, r"replace BRIGHTNESS_UP"),
         ]
     },
 # ROW 5 ###############################################################
     {    
         REPL_KEYCODE: "ASSIST", #SYM
         REPLACE: [
+            # Consume for digit characters and output corresponding unicode 
+            (LALT, r"'\uef00'"),
         ]
     },    
     {    
         REPL_KEYCODE: "SPACE",
         REPLACE: [
-            (BASE, r"' '"),
         ]
     },
     {
         REPL_KEYCODE: "DPAD_LEFT",
         REPLACE: [
+            (LALT, r"replace BACK"),            
         ]
     },
     {
         REPL_KEYCODE: "DPAD_DOWN",
         REPLACE: [
+            (LALT, r"replace BRIGHTNESS_DOWN"),
         ]
     },
     {
         REPL_KEYCODE: "DPAD_RIGHT",
         REPLACE: [
+            (LALT, r"replace FORWARD"),
         ]
     }
 
