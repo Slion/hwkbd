@@ -14,16 +14,6 @@ from qwerty_printed import *
 from qwerty_fx import *
 from qwerty_international import *
 
-CLEANUP_TEMPLATE = [
-    ("    base:           $base\n",""),
-    ("    fn:             $fn\n",""),
-    ("    shift:          $shift\n",""),
-    ("    capslock:       $capslock\n",""),
-    ("    lalt:           $lalt\n",""),
-    ("    ralt:           $ralt\n",""),
-    ("    shift+lalt:     $shift+lalt\n",""),
-    ("    capslock+lalt:  $capslock+lalt\n",""),
-]
 
 #
 SWAP_ALT_FN = r"""
@@ -197,37 +187,36 @@ USINTL_POL_PROG_REPLACE = [
 GENERATED_LAYOUTS = [
     {
         # Process our basic template expanding printed Qwerty character
-        NAME: "pro1_qwerty_printed.kcm",
-        SOURCE: "pro1_qwerty_template.kcm",
+        INPUT: "pro1_qwerty_template.kcm",
+        OUTPUT: "pro1_qwerty_printed.kcm",        
         REPLACE: REPLACE_PRINTED_QWERTY
     },    
     {
         # Process our printed template expanding Fx characters
-        NAME: "pro1_qwerty_fxed.kcm",        
-        SOURCE: "pro1_qwerty_printed.kcm",
+        INPUT: "pro1_qwerty_printed.kcm",
+        OUTPUT: "pro1_qwerty_fxed.kcm",                
         IS_SOURCE_GENERATED: True,
         REPLACE: REPLACE_FX_QWERTY,
         ADD: REMAP_FX
     },
     {
         # Process our printed template expanding Fx characters
-        NAME: "pro1_qwerty_fx_overlay.kcm",        
-        SOURCE: "pro1_qwerty_template.kcm",
-        IS_SOURCE_GENERATED: False,
-        REPLACE: REPLACE_FX_QWERTY+CLEANUP_TEMPLATE,
-        ADD: REMAP_FX 
+        INPUT: "pro1_qwerty_fxed.kcm",
+        OUTPUT: "pro1_qwerty_fx_overlay.kcm",                
+        IS_SOURCE_GENERATED: True,
+        REPLACE: CLEANUP_TEMPLATE,
     },    
     {
         # Process Fxed template expanding international characters 
-        NAME: "pro1_qwerty_international.kcm",        
-        SOURCE: "pro1_qwerty_fxed.kcm",
+        INPUT: "pro1_qwerty_fxed.kcm",
+        OUTPUT: "pro1_qwerty_international.kcm",                
         IS_SOURCE_GENERATED: True,
         REPLACE: REPLACE_INTERNATIONAL_QWERTY
     },
     {
         # Swap alt and fn modifiers to enable alt+tab task switching using fn hardware key
-        NAME: "pro1_qwerty_international_swapped.kcm",
-        SOURCE: "pro1_qwerty_international.kcm",
+        INPUT: "pro1_qwerty_international.kcm",
+        OUTPUT: "pro1_qwerty_international_swapped.kcm",        
         IS_SOURCE_GENERATED: True,
         REPLACE: USINTL_SWAP_ALT_FN,
         REMOVE_KEYCODES: ["TAB"],                 
@@ -245,8 +234,8 @@ def generate_layout(layout, target_dir):
     layout_dir = os.path.join(os.path.dirname(__file__), "app", "src", "main", "res", "raw")
     source_dir = target_dir if layout.get(IS_SOURCE_GENERATED) else layout_dir
     with \
-    open(os.path.join(source_dir, layout[SOURCE]), 'r') as src, \
-    open(os.path.join(target_dir, layout[NAME]), 'w', encoding="utf-8") as dst:
+    open(os.path.join(source_dir, layout[INPUT]), 'r') as src, \
+    open(os.path.join(target_dir, layout[OUTPUT]), 'w', encoding="utf-8") as dst:
         remove_this_key = False
         cur_keycode = None
         rules_matched = {KEYCODE_REPLACE: [], REPLACE: [], REMOVE_SCANCODES: [], REMOVE_KEYCODES: []}
@@ -328,7 +317,7 @@ def generate_layout(layout, target_dir):
                         # non-ASCII rule, it is just for comments so allow not matching
                         continue
                     # Review that check logic as it looks broken now
-                    #raise RuntimeError(f"Rule {rule} for {layout[NAME]} were never executed")
+                    #raise RuntimeError(f"Rule {rule} for {layout[OUTPUT]} were never executed")
 
         dst.write(layout.get(ADD, ""))
 

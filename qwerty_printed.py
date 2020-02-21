@@ -1,9 +1,11 @@
 
 from consts import *
 
+# Interrestingly it looks like we don't need to specify the capslock, weird.
+
 REPLACE_PRINTED_QWERTY = [
 
-    # ROW 1 ###############################################################
+# ROW 1 ###############################################################
     {
         REPL_KEYCODE: "1",
         REPLACE: [
@@ -88,7 +90,7 @@ REPLACE_PRINTED_QWERTY = [
             (FN, r"'+'"),
         ]
     },
-    # ROW 2 ###############################################################
+# ROW 2 ###############################################################
     {    
         REPL_KEYCODE: "TAB",
         REPLACE: [
@@ -181,6 +183,198 @@ REPLACE_PRINTED_QWERTY = [
             (FN, r"':'"),
         ]
     },
+# ROW 3 ###############################################################
+    {    
+        REPL_KEYCODE: "BACKSLASH",
+        REPLACE: [
+            (BASE, r"'\u005c'"),
+            (FN, r"'|'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "A",
+        REPLACE: [
+            (BASE, r"'a'"),
+            (SHIFT, r"'A'"),
+            #(LALT, r"'à'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "S",
+        REPLACE: [
+            (BASE, r"'s'"),
+            (SHIFT, r"'S'"),
+            #(LALT, r"'ß'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "D",
+        REPLACE: [
+            (BASE, r"'d'"),
+            (SHIFT, r"'D'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "F",
+        REPLACE: [
+            (BASE, r"'f'"),
+            (SHIFT, r"'F'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "G",
+        REPLACE: [
+            (BASE, r"'g'"),
+            (SHIFT, r"'G'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "H",
+        REPLACE: [
+            (BASE, r"'h'"),
+            (SHIFT, r"'H'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "J",
+        REPLACE: [
+            (BASE, r"'j'"),
+            (SHIFT, r"'J'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "K",
+        REPLACE: [
+            (BASE, r"'k'"),
+            (SHIFT, r"'K'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "L",
+        REPLACE: [
+            (BASE, r"'l'"),
+            (SHIFT, r"'L'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "APOSTROPHE",
+        REPLACE: [
+            (BASE, r"'\''"),
+            (FN, r"'\"'"),
+            (SHIFT, r"'\u0301'"),            
+        ]
+    },
+    {
+        REPL_KEYCODE: "ENTER",
+        REPLACE: [
+            (BASE, r"'\n'"),
+        ]
+    },
+# ROW 4 ###############################################################
+    {    
+        REPL_KEYCODE: "LEFT_BRACKET",
+        REPLACE: [
+            (BASE, r"'['"),
+            (FN, r"'{'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "RIGHT_BRACKET",
+        REPLACE: [
+            (BASE, r"']'"),
+            (FN, r"'}'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "Z",
+        REPLACE: [
+            (BASE, r"'z'"),
+            (SHIFT, r"'Z'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "X",
+        REPLACE: [
+            (BASE, r"'x'"),
+            (SHIFT, r"'X'"),
+        ]
+    },    
+    {
+        REPL_KEYCODE: "C",
+        REPLACE: [
+            (BASE, r"'c'"),
+            (SHIFT, r"'C'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "V",
+        REPLACE: [
+            (BASE, r"'v'"),
+            (SHIFT, r"'V'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "B",
+        REPLACE: [
+            (BASE, r"'b'"),
+            (SHIFT, r"'B'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "N",
+        REPLACE: [
+            (BASE, r"'n'"),
+            (SHIFT, r"'N'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "M",
+        REPLACE: [
+            (BASE, r"'m'"),
+            (SHIFT, r"'M'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "COMMA",
+        REPLACE: [
+            (BASE, r"','"),
+            (FN, r"'<'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "PERIOD",
+        REPLACE: [
+            (BASE, r"'.'"),
+            (FN, r"'>'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "DPAD_UP",
+        REPLACE: [
+        ]
+    },
+# ROW 5 ###############################################################
+    {    
+        REPL_KEYCODE: "SPACE",
+        REPLACE: [
+        ]
+    },
+    {
+        REPL_KEYCODE: "DPAD_LEFT",
+        REPLACE: [
+        ]
+    },
+    {
+        REPL_KEYCODE: "DPAD_DOWN",
+        REPLACE: [
+        ]
+    },
+    {
+        REPL_KEYCODE: "DPAD_RIGHT",
+        REPLACE: [
+        ]
+    }
+
 ]
 
 
