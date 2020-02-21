@@ -2,6 +2,7 @@
 
 <keyboard-layouts xmlns:android="http://schemas.android.com/apk/res/android">
     <keyboard-layout android:name="pro1_qwerty_us" android:label="@string/pro1_qwerty_us" android:keyboardLayout="@raw/pro1_qwerty_us"/>
+    <keyboard-layout android:name="pro1_qwerty_us_shift_alias" android:label="@string/pro1_qwerty_us_shift_alias" android:keyboardLayout="@raw/pro1_qwerty_us_shift_alias"/>
     <keyboard-layout android:name="pro1_qwerty_us_fn_tab" android:label="@string/pro1_qwerty_us_fn_tab" android:keyboardLayout="@raw/pro1_qwerty_us_fn_tab"/>
     <keyboard-layout android:name="empty" android:label="@string/empty_layout" android:keyboardLayout="@raw/empty"/>
 </keyboard-layouts>

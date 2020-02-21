@@ -12,6 +12,7 @@ import sys
 from consts import *
 from qwerty_printed import *
 from qwerty_fx import *
+from qwerty_shift_alias import *
 from qwerty_fn import *
 from qwerty_fn_custom import *
 from qwerty_alt import *
@@ -46,31 +47,45 @@ GENERATED_LAYOUTS = [
     {
         # Process our printed template expanding Fx characters
         INPUT: "pro1_qwerty_template.kcm",
-        OUTPUT: "pro1_qwerty_us.kcm",                
+        OUTPUT: "pro1_qwerty_us_template.kcm",                
         REPLACE:    REPLACE_PRINTED_QWERTY+
                     QWERTY_FN_PRINTED+
                     QWERTY_FN_CUSTOM+
                     REPLACE_FX_QWERTY+
-                    QWERTY_ALT+
-                    CLEANUP_TEMPLATE,
+                    QWERTY_ALT,
         ADD: REMAP_FX                    
     },
     {
-        # Process our printed template expanding Fx characters
-        INPUT: "pro1_qwerty_us.kcm",
+        # Process our US template swapping alt and fn
+        INPUT: "pro1_qwerty_us_template.kcm",
+        OUTPUT: "pro1_qwerty_us.kcm", 
+        IS_SOURCE_GENERATED: True,               
+        REPLACE: QWERTY_SHIFT_ALIAS + CLEANUP_TEMPLATE,  
+    },    
+    {
+        # Process our US template swapping alt and fn
+        INPUT: "pro1_qwerty_us_template.kcm",
         OUTPUT: "pro1_qwerty_us_fn_tab_tmp.kcm", 
         IS_SOURCE_GENERATED: True,               
-        REPLACE: SWAP_ALT_FN,  
+        REPLACE: CLEANUP_TEMPLATE + SWAP_ALT_FN,  
         ADD: REMAP_SWAP_ALT_FN                    
     },
-
     {
-        # Process our printed template expanding Fx characters
+        # Somehow modifying the same line twice in the same run does not work.
+        # So we had to take an extra step to path our TAB
         INPUT: "pro1_qwerty_us_fn_tab_tmp.kcm",
         OUTPUT: "pro1_qwerty_us_fn_tab.kcm", 
         IS_SOURCE_GENERATED: True,               
         REPLACE: SWAP_TAB_FIX,  
     },
+    {
+        # Process our US template swapping alt and fn
+        INPUT: "pro1_qwerty_us_template.kcm",
+        OUTPUT: "pro1_qwerty_us_shift_alias.kcm", 
+        IS_SOURCE_GENERATED: True,               
+        REPLACE: QWERTY_SHIFT_ALIAS + CLEANUP_TEMPLATE,  
+    },
+
 
     #{
         # Swap alt and fn modifiers to enable alt+tab task switching using fn hardware key
