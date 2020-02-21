@@ -87,7 +87,100 @@ REPLACE_PRINTED_QWERTY = [
             (BASE, r"'='"),
             (FN, r"'+'"),
         ]
-    }
+    },
+    # ROW 2 ###############################################################
+    {    
+        REPL_KEYCODE: "TAB",
+        REPLACE: [
+            (BASE, r"'\t'"),
+            (FN, r"replace APP_SWITCH"),
+        ]
+    },
+    {    
+        REPL_KEYCODE: "GRAVE",
+        REPLACE: [
+            (BASE, r"'`'"),
+            (FN, r"'~'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "Q",
+        REPLACE: [
+            (BASE, r"'q'"),
+            (SHIFT, r"'Q'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "W",
+        REPLACE: [
+            (BASE, r"'w'"),
+            (SHIFT, r"'W'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "E",
+        REPLACE: [
+            (BASE, r"'e'"),
+            (SHIFT, r"'E'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "R",
+        REPLACE: [
+            (BASE, r"'r'"),
+            (SHIFT, r"'R'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "T",
+        REPLACE: [
+            (BASE, r"'t'"),
+            (SHIFT, r"'T'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "Y",
+        REPLACE: [
+            (BASE, r"'y'"),
+            (SHIFT, r"'Y'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "U",
+        REPLACE: [
+            (BASE, r"'u'"),
+            (SHIFT, r"'U'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "I",
+        REPLACE: [
+            (BASE, r"'i'"),
+            (SHIFT, r"'I'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "O",
+        REPLACE: [
+            (BASE, r"'o'"),
+            (SHIFT, r"'O'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "P",
+        REPLACE: [
+            (BASE, r"'p'"),
+            (FN, r"'/'"),
+            (SHIFT, r"'P'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "SEMICOLON",
+        REPLACE: [
+            (BASE, r"';'"),
+            (FN, r"':'"),
+        ]
+    },
 ]
 
 

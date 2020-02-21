@@ -4,6 +4,6 @@
 
     <keyboard-layout android:name="pro1_qwerty_international" android:label="@string/pro1_qwerty_international" android:keyboardLayout="@raw/pro1_qwerty_international"/>
     <keyboard-layout android:name="pro1_qwerty_international_swapped" android:label="@string/pro1_qwerty_international_swapped" android:keyboardLayout="@raw/pro1_qwerty_international_swapped"/>
+    <keyboard-layout android:name="pro1_qwerty_fx_overlay" android:label="@string/pro1_qwerty_fx_overlay" android:keyboardLayout="@raw/pro1_qwerty_fx_overlay"/>
     <keyboard-layout android:name="empty" android:label="@string/empty_layout" android:keyboardLayout="@raw/empty"/>
-
 </keyboard-layouts>

@@ -14,7 +14,16 @@ from qwerty_printed import *
 from qwerty_fx import *
 from qwerty_international import *
 
-
+CLEANUP_TEMPLATE = [
+    ("    base:           $base\n",""),
+    ("    fn:             $fn\n",""),
+    ("    shift:          $shift\n",""),
+    ("    capslock:       $capslock\n",""),
+    ("    lalt:           $lalt\n",""),
+    ("    ralt:           $ralt\n",""),
+    ("    shift+lalt:     $shift+lalt\n",""),
+    ("    capslock+lalt:  $capslock+lalt\n",""),
+]
 
 #
 SWAP_ALT_FN = r"""
@@ -197,7 +206,16 @@ GENERATED_LAYOUTS = [
         NAME: "pro1_qwerty_fxed.kcm",        
         SOURCE: "pro1_qwerty_printed.kcm",
         IS_SOURCE_GENERATED: True,
-        REPLACE: REPLACE_FX_QWERTY
+        REPLACE: REPLACE_FX_QWERTY,
+        ADD: REMAP_FX
+    },
+    {
+        # Process our printed template expanding Fx characters
+        NAME: "pro1_qwerty_fx_overlay.kcm",        
+        SOURCE: "pro1_qwerty_template.kcm",
+        IS_SOURCE_GENERATED: False,
+        REPLACE: REPLACE_FX_QWERTY+CLEANUP_TEMPLATE,
+        ADD: REMAP_FX 
     },    
     {
         # Process Fxed template expanding international characters 

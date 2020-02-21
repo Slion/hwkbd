@@ -25,6 +25,11 @@ REPL_SKIP = "repl_skip"
 
 FN = "$fn"
 SHIFT = "$shift"
+CAPSLOCK = "$capslock"
 RALT = "$ralt"
 LALT = "$lalt"
 BASE = "$base"
+SHIFT_LALT = "$shift+lalt"
+CAPSLOCK_LALT = "$capslock+lalt"
+
+

@@ -86,9 +86,99 @@ REPLACE_INTERNATIONAL_QWERTY = [
             (SHIFT,r"'\u00d7'"),            
             (LALT, r"'\u00f7'")
         ]
-    }
+    },
+    # ROW 2 ###############################################################
+    {    
+        REPL_KEYCODE: "TAB",
+        REPLACE: [
+            (LALT, r"none"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "GRAVE",
+        REPLACE: [
+            (SHIFT,r"'\u0303'"), # ~
+            (LALT, r"'\u0300'"),            
+        ]
+    },
+    {
+        REPL_KEYCODE: "Q",
+        REPLACE: [
+            (LALT, r"'\u00c4'"),
+            (SHIFT_LALT, r"'\u00e4'"),            
+        ]
+    },
+    {
+        REPL_KEYCODE: "W",
+        REPLACE: [
+            (LALT, r"'\u00c5'"),
+            (SHIFT_LALT, r"'\u00e5'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "E",
+        REPLACE: [
+            (LALT, r"'\u00e9'"), # é            
+            (SHIFT_LALT, r"'\u00c9'"), # É
+            (FN, r"'\u0301'"), # Dead ́           
+        ]
+    },
+    {
+        REPL_KEYCODE: "R",
+        REPLACE: [
+            (FN, r"'\u00a4'"),
+            (LALT, r"'\u00a4'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "T",
+        REPLACE: [
+            (FN, r"'\u00c4'"),
+            (LALT, r"none"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "Y",
+        REPLACE: [
+            (FN, r"'\u00c4'"),
+            (LALT, r"none"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "U",
+        REPLACE: [
+            (FN, r"'\u00c4'"),
+            (LALT, r"none"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "I",
+        REPLACE: [
+            (FN, r"'\u00c4'"),
+            (LALT, r"none"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "O",
+        REPLACE: [
+            (FN, r"'\u00c4'"),
+            (LALT, r"none"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "P",
+        REPLACE: [
+            (FN, r"'\u00c4'"),
+            (LALT, r"none"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "SEMICOLON",
+        REPLACE: [
+            (FN, r"'\u00c4'"),
+            (LALT, r"none"),
+        ]
+    },
 
 ]
-
-
 

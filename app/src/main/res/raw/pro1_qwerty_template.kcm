@@ -27,22 +27,12 @@ map key 158 ESCAPE
 # SYM remap
 map key 249 ASSIST
 
-key ASSIST {
-    ralt: replace POWER
-    # Keyboard backlight on
-    fn: replace F6
-}
-
 # Trying to remap Hall sensor scan code
 # Not working
 #map key 468 SLEEP
 #map key 469 WAKEUP
 #map key 468 F3
 #map key 469 F4
-
-
-# Remap FxTec Home Key
-map key 172 ALT_RIGHT
 
 
 # map alt+sym = F6 (which signals keyboard open), allowing one to press alt+sym
@@ -60,464 +50,665 @@ map key 172 ALT_RIGHT
 # ROW 1 ###############################################################
 
 key ESCAPE {
-    base:                               fallback BACK
-    fn:                                 replace HOME
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 1 {
     label:  '1'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt    
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 2 {
     label:  '2'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 3 {
     label:  '3'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 4 {
     label:  '4'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 5 {
     label:  '5'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 6 {
     label:  '6'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 7 {
     label:  '7'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 8 {
     label:  '8'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 9 {
     label:  '9'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key 0 {
     label:  '0'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key MINUS {
     label:  '-'
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key EQUALS {
     label:  '='
-    base:   $base
-    fn:     $fn
-    shift:  $shift
-    lalt:   $lalt
-    ralt:   $ralt
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 # ROW 2 ###############################################################
 
 key TAB {
-    label, base: '\t'
-    fn: replace APP_SWITCH
+    label: '\t'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key GRAVE {
     label:                              '`'
-    base:                               '\u0300'
-    shift:                              '\u0303'
-    fn:                                 '~'
-    lalt:                                '`'
-    fn+shift, ctrl+fn:                  '~'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key Q {
     label:                              'Q'
-    base:                               'q'
-    shift, capslock:                    'Q'
-    fn:                                 '\u00e4'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00c4'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key W {
     label:                              'W'
-    base:                               'w'
-    shift, capslock:                    'W'
-    fn:                                 '\u00e5'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00c5'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key E {
     label:                              'E'
-    base:                               'e'
-    shift, capslock:                    'E'
-    lalt:                                '\u0301'
-    fn:                                 '\u00e9'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00c9'
-    # Fx + E launch Email
-    ralt:                               replace ENVELOPE
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key R {
     label:                              'R'
-    base:                               'r'
-    shift, capslock:                    'R'
-    fn:                                 '\u00a4'
-    fn+shift, ctrl+fn:                  '\u00a4'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key T {
     label:                              'T'
-    base:                               't'
-    shift, capslock:                    'T'
-    fn:                                 '\u00fe'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00de'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key Y {
     label:                              'Y'
-    base:                               'y'
-    shift, capslock:                    'Y'
-    fn:                                 '\u00fc'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00dc'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key U {
     label:                              'U'
-    base:                               'u'
-    shift, capslock:                    'U'
-    lalt:                                '\u0308'
-    fn:                                 '\u00fa'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00da'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key I {
     label:                              'I'
-    base:                               'i'
-    shift, capslock:                    'I'
-    lalt:                                '\u0302'
-    fn:                                 '\u00ed'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00cd'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key O {
     label:                              'O'
-    base:                               'o'
-    shift, capslock:                    'O'
-    fn:                                 '\u00f3'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00d3'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key P {
     label:                              'P'
-    base:                               'p'
-    shift, capslock:                    'P'
-    fn:                                 '/'
-    lalt:                               '\u00f6'
-    # Fx + P launch Phone book/People/Contacts
-    ralt:                               replace CONTACTS
-    fn+shift, ctrl+fn, fn+capslock:     '\u00d6'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key SEMICOLON {
     label:                              ';'
-    base:                               ';'
-    shift, fn:                          ':'
-    lalt:                                '\u00b7'
-    fn+shift, ctrl+fn:                  '\u00b0'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 # ROW 3 ###############################################################
 
 key BACKSLASH {
     label:                              '\u005c'
-    base:                               '\u005c'
-    shift, fn:                          '|'
-    lalt:                                '\u00ac'
-    fn+shift, ctrl+fn:                  '\u00a6'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key A {
     label:                              'A'
-    base:                               'a'
-    shift, capslock:                    'A'
-    fn:                                 '\u00e1'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00c1'
-    # Fx + A launch Agenda/Calendar
-    ralt:                               replace CALENDAR
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key S {
     label:                              'S'
-    base:                               's'
-    shift, capslock:                    'S'
-    lalt:                                '\u00df'
-    fn:                                 '\u00df'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00a7'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key D {
     label:                              'D'
-    base:                               'd'
-    shift, capslock:                    'D'
-    fn:                                 '\u00f0'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00d0'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key F {
     label:                              'F'
-    base:                               'f'
-    shift, capslock:                    'F'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key G {
     label:                              'G'
-    base:                               'g'
-    shift, capslock:                    'G'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key H {
     label:                              'H'
-    base:                               'h'
-    lalt:                                '\u0303'
-    shift, capslock:                    'H'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key J {
     label:                              'J'
-    base:                               'j'
-    shift, capslock:                    'J'
-    fn:                                 '\u00bf'
-    fn+shift, ctrl+fn:                  '\u0309'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key K {
     label:                              'K'
-    base:                               'k'
-    shift, capslock:                    'K'
-    fn:                                 '\u0153'
-    fn+shift, ctrl+fn, fn+capslock:     '\u0152'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key L {
     label:                              'L'
-    base:                               'l'
-    shift, capslock:                    'L'
-    fn:                                 '?'
-    lalt:                                '\u00f8'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00d8'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key APOSTROPHE {
     label:                              '\''
-    base:                               '\u0301'
-    shift:                              '\u0308'
-    fn:                                 '"'
-    lalt:                                '\''
-    fn+shift, ctrl+fn:                  '"'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key ENTER {
     base: '\n'
-    ralt: replace MEDIA_PLAY_PAUSE
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 # ROW 4 ###############################################################
 
 key LEFT_BRACKET {
     label:                              '['
-    base:                               '['
-    shift, fn:                          '{'
-    lalt:                                '\u00ab'
-    fn+shift, ctrl+fn:                  '\u201c'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key RIGHT_BRACKET {
     label:                              ']'
-    base:                               ']'
-    shift, fn:                          '}'
-    lalt:                                '\u00bb'
-    fn+shift, ctrl+fn:                  '\u201d'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key Z {
     label:                              'Z'
-    base:                               'z'
-    shift, capslock:                    'Z'
-    fn:                                 '\u00e6'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00c6'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key X {
     label:                              'X'
-    base:                               'x'
-    shift, capslock:                    'X'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key C {
     label:                              'C'
-    base:                               'c'
-    shift, capslock:                    'C'
-    lalt:                                '\u00e7'
-    shift+lalt:                          '\u00c7'
-    fn:                                 '\u00a9'
-    fn+shift, ctrl+fn:                  '\u00a2'
-    # Fx + C launch Calculator
-    ralt:                               replace CALCULATOR
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 
 }
 
 key V {
     label:                              'V'
-    base:                               'v'
-    shift, capslock:                    'V'
-    # Fx + V launch Voice Assist
-    ralt:                               replace VOICE_ASSIST
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key B {
     label:                              'B'
-    base:                               'b'
-    shift, capslock:                    'B'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key N {
     label:                              'N'
-    base:                               'n'
-    shift, capslock:                    'N'
-    lalt:                                '\u0303'
-    fn:                                 '\u00f1'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00d1'
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key M {
     label:                              'M'
-    base:                               'm'
-    shift, capslock:                    'M'
-    fn:                                 '\u00b5'
-    fn+shift, ctrl+fn:                  '\u00b5'
-    # Fx + M launch Music
-    ralt:                               replace MUSIC
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key COMMA {
     label:                              ','
-    base:                               ','
-    shift, fn:                          '<'
-    lalt:                                '\u00e7'
-    fn+shift, ctrl+fn, fn+capslock:     '\u00c7'
-    ralt:                               replace MEDIA_REWIND    
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key PERIOD {
     label:                              '.'
-    base:                               '.'
-    shift, fn:                          '>'
-    lalt:                               '\u0307'
-    fn+shift, ctrl+fn:                  '\u030c'
-    ralt:                               replace MEDIA_FAST_FORWARD
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key DPAD_UP {
-    fn:         replace PAGE_UP
-    lalt:       replace BRIGHTNESS_UP    
-    ralt:       replace VOLUME_UP
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 # ROW 5 ###############################################################
 
+key ASSIST {
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
+}
+
 key SPACE {
-    label, base:    ' '
-    # Character picker dialog
-    lalt:           '\uef01'
-    # No effects on stock
-    #lalt:          replace ALL_APPS
-    fn: replace SEARCH
-    shift:          replace SEARCH
-    # Fx + SPACE launch Web Browser
-    ralt:           replace EXPLORER
+    label:    ' '
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key DPAD_LEFT {
-    fn:         replace MOVE_HOME
-    lalt:       replace BACK
-    ralt:       replace MEDIA_PREVIOUS                         
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key DPAD_DOWN {
-    fn:         replace PAGE_DOWN
-    lalt:       replace BRIGHTNESS_DOWN
-    ralt:       replace VOLUME_DOWN
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
 key DPAD_RIGHT {
-    fn:     replace MOVE_END
-    lalt:   replace FORWARD
-    ralt:   replace MEDIA_NEXT                             
+    base:           $base
+    fn:             $fn
+    shift:          $shift
+    capslock:       $capslock
+    lalt:           $lalt
+    ralt:           $ralt
+    shift+lalt:     $shift+lalt
+    capslock+lalt:  $capslock+lalt
 }
 
-# Experiment for smart case open and close detection
-#key F3 {
-#    fn: replace SLEEP
-#}
-
-#key F4 {
-#    fn: replace WAKEUP
-#}
