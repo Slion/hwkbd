@@ -1,0 +1,713 @@
+type OVERLAY
+
+# Find docs about this file format there:
+# https://source.android.com/devices/input/key-character-map-files
+# Key Events are defined there:
+# https://developer.android.com/reference/android/view/KeyEvent.html
+#
+# This configuration is very secific to F(x)tec Pro1 QWERTY hardware keyboard
+# Here are some facts about F(x)tec Pro1 QWERTY hardware keyboard and default layout:
+# - Both Shift keys have the same scan code (54) and are mapped to SHIFT_RIGHT
+# - Both Ctrl keys have the same scan code (29) and are mapped to CTRL_LEFT
+# - Both Fn keys have the same scan code (464) and are mapped to FUNCTION
+# - Alt key scan code is 56 and is mapped to ALT_LEFT
+# - Sym key scan code is 249 and is mapped to SYM, however it does not look functional, is that a bug in the driver?
+# - Sym is not functional as a modifier no matter which one we use. Is that a driver bug?
+
+# Here are some facts about Android 9 behaviour on stock F(x)tec Pro1: 
+# - Note that META_RIGHT and META_LEFT somehow launch the voice assistant so they are not usable as modifiers
+
+
+# orig BACK
+map key 158 ESCAPE
+
+# orig SYM but SYM does not do anything at the moment
+# so use as back/wakeup for now
+#map key 249 WAKEUP
+# SYM remap
+map key 249 ASSIST
+
+# Trying to remap Hall sensor scan code
+# Not working
+#map key 468 SLEEP
+#map key 469 WAKEUP
+#map key 468 F3
+#map key 469 F4
+
+
+# map alt+sym = F6 (which signals keyboard open), allowing one to press alt+sym
+# to trigger enabling keyboard backlight and screen rotation as sometimes the
+# Pro1 stock OS seems to lose the keyboard open state
+#key WAKEUP {
+#    lalt:                                replace F6
+#}
+
+#key ALT_LEFT {
+#    base: replace ALT_LEFT
+#    fn: replace PICTSYMBOLS
+#}
+
+# ROW 1 ###############################################################
+
+key ESCAPE {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 1 {
+    label:  '1'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 2 {
+    label:  '2'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 3 {
+    label:  '3'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 4 {
+    label:  '4'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 5 {
+    label:  '5'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 6 {
+    label:  '6'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 7 {
+    label:  '7'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 8 {
+    label:  '8'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 9 {
+    label:  '9'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key 0 {
+    label:  '0'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key MINUS {
+    label:  '-'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key EQUALS {
+    label:  '='
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# ROW 2 ###############################################################
+
+key TAB {
+    label: '\t'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key GRAVE {
+    label:                              '`'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key Q {
+    label:                              'Q'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key W {
+    label:                              'W'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key E {
+    label:                              'E'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key R {
+    label:                              'R'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key T {
+    label:                              'T'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key Y {
+    label:                              'Y'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key U {
+    label:                              'U'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key I {
+    label:                              'I'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key O {
+    label:                              'O'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key P {
+    label:                              'P'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key SEMICOLON {
+    label:                              ';'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# ROW 3 ###############################################################
+
+key BACKSLASH {
+    label:                              '\u005c'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key A {
+    label:                              'A'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key S {
+    label:                              'S'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key D {
+    label:                              'D'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key F {
+    label:                              'F'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key G {
+    label:                              'G'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key H {
+    label:                              'H'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key J {
+    label:                              'J'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key K {
+    label:                              'K'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key L {
+    label:                              'L'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key APOSTROPHE {
+    label:                              '\''
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key ENTER {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# ROW 4 ###############################################################
+
+key LEFT_BRACKET {
+    label:                              '['
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key RIGHT_BRACKET {
+    label:                              ']'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key Z {
+    label:                              'Z'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key X {
+    label:                              'X'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key C {
+    label:                              'C'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+
+}
+
+key V {
+    label:                              'V'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key B {
+    label:                              'B'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key N {
+    label:                              'N'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key M {
+    label:                              'M'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key COMMA {
+    label:                              ','
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key PERIOD {
+    label:                              '.'
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key DPAD_UP {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# ROW 5 ###############################################################
+
+key ASSIST {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key SPACE {
+    label:    ' '
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key DPAD_LEFT {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key DPAD_DOWN {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+key DPAD_RIGHT {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
