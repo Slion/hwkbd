@@ -278,7 +278,6 @@ REPLACE_PRINTED_QWERTY = [
         REPLACE: [
             (BASE, r"'\''"),
             (FN, r"'\"'"),
-            (SHIFT, r"'\u0301'"),            
         ]
     },
     {

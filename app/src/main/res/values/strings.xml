@@ -5,6 +5,7 @@
     <string name="pro1_qwerty_us">F(x)tec Pro1 Qwerty - US</string>
     <string name="pro1_qwerty_us_shift_alias">F(x)tec Pro1 Qwerty - US - Shift as Fn</string>
     <string name="pro1_qwerty_us_fn_tab">F(x)tec Pro1 Qwerty - US - Fn+Tab</string>
+    <string name="pro1_qwerty_us_shift_alias_fn_tab">F(x)tec Pro1 Qwerty - US - Shift as Fn - Fn+Tab</string>
 
     <string name="empty_layout">F(x)tec Pro1 Qwerty - Default</string>
 

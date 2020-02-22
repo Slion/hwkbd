@@ -45,7 +45,7 @@ SWAP_TAB_FIX = [
 
 GENERATED_LAYOUTS = [
     {
-        # Process our printed template expanding Fx characters
+        # Process our QWERTY template
         INPUT: "pro1_qwerty_template.kcm",
         OUTPUT: "pro1_qwerty_us_template.kcm",                
         REPLACE:    REPLACE_PRINTED_QWERTY+
@@ -56,34 +56,52 @@ GENERATED_LAYOUTS = [
         ADD: REMAP_FX                    
     },
     {
-        # Process our US template swapping alt and fn
+        # Process our US template 
+        # That the basic US layout
         INPUT: "pro1_qwerty_us_template.kcm",
         OUTPUT: "pro1_qwerty_us.kcm", 
         IS_SOURCE_GENERATED: True,               
-        REPLACE: QWERTY_SHIFT_ALIAS + CLEANUP_TEMPLATE,  
+        REPLACE: CLEANUP_TEMPLATE,  
     },    
     {
-        # Process our US template swapping alt and fn
-        INPUT: "pro1_qwerty_us_template.kcm",
+        # Swapping alt and fn
+        INPUT: "pro1_qwerty_us.kcm",
         OUTPUT: "pro1_qwerty_us_fn_tab_tmp.kcm", 
         IS_SOURCE_GENERATED: True,               
-        REPLACE: CLEANUP_TEMPLATE + SWAP_ALT_FN,  
+        REPLACE: SWAP_ALT_FN,  
         ADD: REMAP_SWAP_ALT_FN                    
     },
     {
         # Somehow modifying the same line twice in the same run does not work.
-        # So we had to take an extra step to path our TAB
+        # So we had to take an extra step to patch our TAB
         INPUT: "pro1_qwerty_us_fn_tab_tmp.kcm",
         OUTPUT: "pro1_qwerty_us_fn_tab.kcm", 
         IS_SOURCE_GENERATED: True,               
         REPLACE: SWAP_TAB_FIX,  
     },
     {
-        # Process our US template swapping alt and fn
+        # Process our US template adding shift alias
+        # That's enabling the use of the Shift key to access most Fn characters
         INPUT: "pro1_qwerty_us_template.kcm",
         OUTPUT: "pro1_qwerty_us_shift_alias.kcm", 
         IS_SOURCE_GENERATED: True,               
         REPLACE: QWERTY_SHIFT_ALIAS + CLEANUP_TEMPLATE,  
+    },
+    {
+        # Swapping alt and fn
+        INPUT: "pro1_qwerty_us_shift_alias.kcm",
+        OUTPUT: "pro1_qwerty_us_shift_alias_fn_tab_tmp.kcm", 
+        IS_SOURCE_GENERATED: True,               
+        REPLACE: SWAP_ALT_FN,  
+        ADD: REMAP_SWAP_ALT_FN                    
+    },
+    {
+        # Somehow modifying the same line twice in the same run does not work.
+        # So we had to take an extra step to patch our TAB
+        INPUT: "pro1_qwerty_us_shift_alias_fn_tab_tmp.kcm",
+        OUTPUT: "pro1_qwerty_us_shift_alias_fn_tab.kcm", 
+        IS_SOURCE_GENERATED: True,               
+        REPLACE: SWAP_TAB_FIX,  
     },
 
 
