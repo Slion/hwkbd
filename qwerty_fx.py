@@ -89,7 +89,7 @@ REPLACE_FX_QWERTY = [
     {
         REPL_KEYCODE: "GRAVE",
         REPLACE: [
-            (RALT, r"none"),
+            (RALT, r"'\u0303'"), # ~ dead key
         ]
     },
     {

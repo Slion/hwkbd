@@ -26,6 +26,7 @@ QWERTY_ALT = [
         REPL_KEYCODE: "4",
         REPLACE: [
             #(FN, r"'$'"),
+            (LALT, r"'\u20AC'"), # €
         ]
     },
     {
@@ -45,6 +46,7 @@ QWERTY_ALT = [
         REPL_KEYCODE: "7",
         REPLACE: [
             #(FN, r"'&'"),
+            (LALT, r"'\u00A3'"), # £
         ]
     },
     {
@@ -103,8 +105,7 @@ QWERTY_ALT = [
     {
         REPL_KEYCODE: "E",
         REPLACE: [
-            # Accute accent dead key 
-            (LALT, r"'\u0301'"),
+            (LALT, r"'\u00E8'"), # è
         ]
     },
     {
@@ -120,6 +121,7 @@ QWERTY_ALT = [
     {
         REPL_KEYCODE: "Y",
         REPLACE: [
+            (LALT, r"'\u00A5'"), # ¥        
         ]
     },
     {
@@ -137,6 +139,7 @@ QWERTY_ALT = [
     {
         REPL_KEYCODE: "O",
         REPLACE: [
+            (LALT, r"'\u0153'"), # œ
         ]
     },
     {
@@ -160,9 +163,8 @@ QWERTY_ALT = [
     },
     {
         REPL_KEYCODE: "A",
-        REPLACE: [
-            # à
-            (LALT, r"'\u00E0'"),
+        REPLACE: [            
+            (LALT, r"'\u00E6'"), # æ
         ]
     },
     {
@@ -212,8 +214,8 @@ QWERTY_ALT = [
         REPL_KEYCODE: "APOSTROPHE",
         REPLACE: [
             #(FN, r"'\"'"),
-            # Umlaut dead key 
-            (LALT, r"'\u0308'"),
+            # Accute accent dead key 
+            (LALT, r"'\u0301'"),
         ]
     },
     {

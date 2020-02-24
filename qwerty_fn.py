@@ -100,7 +100,8 @@ QWERTY_FN_PRINTED = [
     },
     {
         REPL_KEYCODE: "E",
-        REPLACE: [
+        REPLACE: [            
+            (FN, r"'\u00E9'"), # é
         ]
     },
     {
@@ -155,7 +156,8 @@ QWERTY_FN_PRINTED = [
     {
         REPL_KEYCODE: "A",
         REPLACE: [
-            #(LALT, r"'à'"),
+            (FN, r"'\u00E0'"), # à
+            #(LALT, r"'\u00E6'"), # æ
         ]
     },
     {
