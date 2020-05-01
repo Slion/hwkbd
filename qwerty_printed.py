@@ -5,6 +5,12 @@ REPLACE_PRINTED_QWERTY = [
 
 # ROW 1 ###############################################################
     {
+        REPL_KEYCODE: "ESCAPE",
+        REPLACE: [
+            (BASE, r"fallback BACK"),
+        ]
+    },
+    {
         REPL_KEYCODE: "1",
         REPLACE: [
             (BASE, r"'1'"),

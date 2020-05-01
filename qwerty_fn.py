@@ -122,6 +122,8 @@ QWERTY_FN_PRINTED = [
     {
         REPL_KEYCODE: "U",
         REPLACE: [
+            # ü
+            (FN, r"'\u00FC'"),
         ]
     },
     {
@@ -132,6 +134,8 @@ QWERTY_FN_PRINTED = [
     {
         REPL_KEYCODE: "O",
         REPLACE: [
+            # ö
+            (FN, r"'\u00F6'"),
         ]
     },
     {
@@ -239,6 +243,8 @@ QWERTY_FN_PRINTED = [
     {
         REPL_KEYCODE: "C",
         REPLACE: [
+            # ç
+            (FN, r"'\u00E7'"),
         ]
     },
     {

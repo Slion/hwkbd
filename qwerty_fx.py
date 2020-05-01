@@ -180,7 +180,7 @@ REPLACE_FX_QWERTY = [
     {
         REPL_KEYCODE: "D",
         REPLACE: [
-            (RALT, r"none"),
+            (RALT, r"replace HOME"),
         ]
     },
     {
@@ -198,7 +198,7 @@ REPLACE_FX_QWERTY = [
     {
         REPL_KEYCODE: "H",
         REPLACE: [
-            (RALT, r"replace HOME"),
+            (RALT, r"none"),
         ]
     },
     {

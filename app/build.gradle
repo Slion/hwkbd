@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 36
-        versionName "0.2.0"
+        versionCode 37
+        versionName "0.3.0"
         applicationId "net.slions.hwkbd"
     }
 
