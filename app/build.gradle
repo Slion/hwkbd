@@ -12,16 +12,30 @@ android {
         versionCode 37
         versionName "0.3.0"
         applicationId "net.slions.hwkbd"
+        archivesBaseName = "hwkbd-v$versionName"
     }
 
-    flavorDimensions "version"
+    flavorDimensions "device", "layout"
 
     productFlavors {
-        FxTecPro1Qwerty {
-            dimension "version"
-            applicationIdSuffix ".FxTecPro1Qwerty"
+
+        fxTecPro1 {
+            dimension "device"
+            applicationIdSuffix ".fxtec.pro1"
+        }
+
+        qwerty {
+            dimension "layout"
+            applicationIdSuffix ".qwerty"
+        }
+
+        qwertz {
+            dimension "layout"
+            applicationIdSuffix ".qwertz"
         }
     }
+
+
 
     sourceSets.main.res.srcDirs += generatedLayoutsResDir
 }

@@ -57,7 +57,7 @@ GENERATED_LAYOUTS = [
     },
     {
         # Process our US template 
-        # That the basic US layout
+        # That's the basic US layout
         INPUT: "pro1_qwerty_us_template.kcm",
         OUTPUT: "pro1_qwerty_us.kcm", 
         IS_SOURCE_GENERATED: True,               
