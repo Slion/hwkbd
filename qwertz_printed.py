@@ -1,7 +1,7 @@
 
 from consts import *
 
-QWERTY_PRINTED = [
+QWERTZ_PRINTED = [
 
 # ROW 1 ###############################################################
     {
@@ -15,20 +15,23 @@ QWERTY_PRINTED = [
         REPLACE: [
             (BASE, r"'1'"),
             (FN, r"'!'"),
+            (SHIFT, r"'!'"),
         ]
     },
     {
         REPL_KEYCODE: "2",
         REPLACE: [
             (BASE, r"'2'"),
-            (FN, r"'@'"),
+            (FN, r"'\"'"),
+            (SHIFT, r"'\"'"),
         ]
     },
     {
         REPL_KEYCODE: "3",
         REPLACE: [
             (BASE, r"'3'"),
-            (FN, r"'#'"),
+            (FN, r"'\u00a7'"),
+            (SHIFT, r"'\u00a7'"),
         ]
     },
     {
@@ -36,6 +39,7 @@ QWERTY_PRINTED = [
         REPLACE: [
             (BASE, r"'4'"),
             (FN, r"'$'"),
+            (SHIFT, r"'$'"),
         ]
     },
     {
@@ -43,83 +47,87 @@ QWERTY_PRINTED = [
         REPLACE: [
             (BASE, r"'5'"),
             (FN, r"'%'"),
+            (SHIFT, r"'%'"),
         ]
     },
     {
         REPL_KEYCODE: "6",
         REPLACE: [
             (BASE, r"'6'"),
-            (FN, r"'^'"),
+            (FN, r"'&'"),
+            (SHIFT, r"'&'"),
         ]
     },
     {
         REPL_KEYCODE: "7",
         REPLACE: [
             (BASE, r"'7'"),
-            (FN, r"'&'"),
+            (FN, r"'/'"),
+            (SHIFT, r"'/'"),
         ]
     },
     {
         REPL_KEYCODE: "8",
         REPLACE: [
             (BASE, r"'8'"),
-            (FN, r"'*'"),
+            (FN, r"'('"),
+            (SHIFT, r"'('"),
         ]
     },
     {
         REPL_KEYCODE: "9",
         REPLACE: [
             (BASE, r"'9'"),
-            (FN, r"'('"),
+            (FN, r"')'"),
+            (SHIFT, r"')'"),
         ]
     },
     {
         REPL_KEYCODE: "0",
         REPLACE: [
             (BASE, r"'0'"),
-            (FN, r"')'"),
+            (FN, r"'='"),
+            (SHIFT, r"'='"),
         ]
     },
     {
         REPL_KEYCODE: "MINUS",
         REPLACE: [
-            (BASE, r"'-'"),
-            (FN, r"'_'"),
+            (BASE, r"'\u00df'"),
+            (FN, r"'?'"),
+            (SHIFT, r"'\u1e9e'"),
+            (CAPSLOCK, r"'\u1e9e'"),
         ]
     },
     {
         REPL_KEYCODE: "EQUALS",
         REPLACE: [
-            (BASE, r"'='"),
-            (FN, r"'+'"),
+            (BASE, r"'\u0301'"),
+            (FN, r"'\u0300'"),
+            (SHIFT, r"'\u0300'"),
         ]
     },
 # ROW 2 ###############################################################
-    {    
+    {
         REPL_KEYCODE: "TAB",
         REPLACE: [
-            (BASE, r"'\t'"),            
-        ]
-    },
-    {    
-        REPL_KEYCODE: "GRAVE",
-        REPLACE: [
-            (BASE, r"'`'"),
-            (FN, r"'~'"),
+            (BASE, r"'\t'"),
         ]
     },
     {
         REPL_KEYCODE: "Q",
         REPLACE: [
             (BASE, r"'q'"),
+            (FN, r"'@'"),
             (SHIFT, r"'Q'"),
-            (CAPSLOCK, r"'Q'"),            
+            (CAPSLOCK, r"'Q'"),
         ]
     },
     {
         REPL_KEYCODE: "W",
         REPLACE: [
             (BASE, r"'w'"),
+            (FN, r"'\u0302'"),
             (SHIFT, r"'W'"),
             (CAPSLOCK, r"'W'"),
         ]
@@ -128,6 +136,7 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "E",
         REPLACE: [
             (BASE, r"'e'"),
+            (FN, r"'\u20ac'"),
             (SHIFT, r"'E'"),
             (CAPSLOCK, r"'E'"),
         ]
@@ -136,6 +145,7 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "R",
         REPLACE: [
             (BASE, r"'r'"),
+            (FN, r"'\u00b0'"),
             (SHIFT, r"'R'"),
             (CAPSLOCK, r"'R'"),
         ]
@@ -152,6 +162,7 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "Y",
         REPLACE: [
             (BASE, r"'y'"),
+            (FN, r"'|'"),
             (SHIFT, r"'Y'"),
             (CAPSLOCK, r"'Y'"),
         ]
@@ -160,6 +171,7 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "U",
         REPLACE: [
             (BASE, r"'u'"),
+            (FN, r"'{'"),
             (SHIFT, r"'U'"),
             (CAPSLOCK, r"'U'"),
         ]
@@ -168,6 +180,7 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "I",
         REPLACE: [
             (BASE, r"'i'"),
+            (FN, r"'['"),
             (SHIFT, r"'I'"),
             (CAPSLOCK, r"'I'"),
         ]
@@ -176,6 +189,7 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "O",
         REPLACE: [
             (BASE, r"'o'"),
+            (FN, r"']'"),
             (SHIFT, r"'O'"),
             (CAPSLOCK, r"'O'"),
         ]
@@ -184,26 +198,29 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "P",
         REPLACE: [
             (BASE, r"'p'"),
-            (FN, r"'/'"),
+            (FN, r"'}'"),
             (SHIFT, r"'P'"),
             (CAPSLOCK, r"'P'"),
         ]
     },
     {
+        REPL_KEYCODE: "GRAVE",
+        REPLACE: [
+            (BASE, r"'\u00fc'"),
+            (FN, r"'\u0303'"),
+            (SHIFT, r"'\u00dc'"),
+            (CAPSLOCK, r"'\u00dc'"),
+        ]
+    },
+    {
         REPL_KEYCODE: "SEMICOLON",
         REPLACE: [
-            (BASE, r"';'"),
-            (FN, r"':'"),
+            (BASE, r"'+'"),
+            (FN, r"'*'"),
+            (SHIFT, r"'*'"),
         ]
     },
 # ROW 3 ###############################################################
-    {    
-        REPL_KEYCODE: "BACKSLASH",
-        REPLACE: [
-            (BASE, r"'\u005c'"),
-            (FN, r"'|'"),
-        ]
-    },
     {
         REPL_KEYCODE: "A",
         REPLACE: [
@@ -274,16 +291,27 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "L",
         REPLACE: [
             (BASE, r"'l'"),
-            (FN, r"'?'"),
+            (FN, r"'\''"),
             (SHIFT, r"'L'"),
             (CAPSLOCK, r"'L'"),
         ]
     },
     {
+        REPL_KEYCODE: "BACKSLASH",
+        REPLACE: [
+            (BASE, r"'\u00f6'"),
+            (FN, r"'\\'"),
+            (SHIFT, r"'\u00d6'"),
+            (CAPSLOCK, r"'\u00d6'"),
+        ]
+    },
+    {
         REPL_KEYCODE: "APOSTROPHE",
         REPLACE: [
-            (BASE, r"'\''"),
-            (FN, r"'\"'"),
+            (BASE, r"'\u00e4'"),
+            (FN, r"'#'"),
+            (SHIFT, r"'\u00c4'"),
+            (CAPSLOCK, r"'\u00c4'"),
         ]
     },
     {
@@ -293,18 +321,12 @@ QWERTY_PRINTED = [
         ]
     },
 # ROW 4 ###############################################################
-    {    
+    {
         REPL_KEYCODE: "LEFT_BRACKET",
         REPLACE: [
-            (BASE, r"'['"),
-            (FN, r"'{'"),
-        ]
-    },
-    {
-        REPL_KEYCODE: "RIGHT_BRACKET",
-        REPLACE: [
-            (BASE, r"']'"),
-            (FN, r"'}'"),
+            (BASE, r"'<'"),
+            (FN, r"'>'"),
+            (SHIFT, r"'>'"),
         ]
     },
     {
@@ -322,7 +344,7 @@ QWERTY_PRINTED = [
             (SHIFT, r"'X'"),
             (CAPSLOCK, r"'X'"),
         ]
-    },    
+    },
     {
         REPL_KEYCODE: "C",
         REPLACE: [
@@ -359,6 +381,7 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "M",
         REPLACE: [
             (BASE, r"'m'"),
+            (FN, r"'\u00b5'"),
             (SHIFT, r"'M'"),
             (CAPSLOCK, r"'M'"),
         ]
@@ -367,14 +390,24 @@ QWERTY_PRINTED = [
         REPL_KEYCODE: "COMMA",
         REPLACE: [
             (BASE, r"','"),
-            (FN, r"'<'"),
+            (FN, r"';'"),
+            (SHIFT, r"';'"),
         ]
     },
     {
         REPL_KEYCODE: "PERIOD",
         REPLACE: [
             (BASE, r"'.'"),
-            (FN, r"'>'"),
+            (FN, r"':'"),
+            (SHIFT, r"':'"),
+        ]
+    },
+    {
+        REPL_KEYCODE: "RIGHT_BRACKET",
+        REPLACE: [
+            (BASE, r"'-'"),
+            (FN, r"'_'"),
+            (SHIFT, r"'_'"),
         ]
     },
     {
@@ -383,12 +416,12 @@ QWERTY_PRINTED = [
         ]
     },
 # ROW 5 ###############################################################
-    {    
+    {
         REPL_KEYCODE: "ASSIST", #SYM
         REPLACE: [
         ]
-    },    
-    {    
+    },
+    {
         REPL_KEYCODE: "SPACE",
         REPLACE: [
             (BASE, r"' '"),

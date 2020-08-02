@@ -1,10 +1,6 @@
 
 from consts import *
 
-REMAP_FX = r"""
-# Remap FxTec Home Key
-map key 172 ALT_RIGHT
-"""
 
 REPLACE_FX_QWERTY = [
     {

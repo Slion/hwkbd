@@ -18,14 +18,11 @@ type OVERLAY
 # - Note that META_RIGHT and META_LEFT somehow launch the voice assistant so they are not usable as modifiers
 
 
-# orig BACK
-map key 158 ESCAPE
-
 # orig SYM but SYM does not do anything at the moment
 # so use as back/wakeup for now
 #map key 249 WAKEUP
 # SYM remap
-map key 249 ASSIST
+#map key 249 ASSIST
 
 # Trying to remap Hall sensor scan code
 # Not working
@@ -47,9 +44,41 @@ map key 249 ASSIST
 #    fn: replace PICTSYMBOLS
 #}
 
+
+##### ROW 1 #####
+# ESC
+map key 1 $key-1$
+# 1
+map key 2 $key-2$
+# 2
+map key 3 $key-3$
+# 3
+map key 4 $key-4$
+# 4
+map key 5 $key-5$
+# 5
+map key 6 $key-6$
+# 6
+map key 7 $key-7$
+# 7
+map key 8 $key-8$
+# 8
+map key 9 $key-9$
+# 9
+map key 10 $key-10$
+# 0
+map key 11 $key-11$
+# -
+map key 12 $key-12$
+# =
+map key 13 $key-13$
+# Backspace
+map key 14 $key-14$
+
 # ROW 1 ###############################################################
 
-key ESCAPE {
+# ESCAPE
+key $key-1$ {
     base:           $base$
     fn:             $fn$
     shift:          $shift$
@@ -60,7 +89,8 @@ key ESCAPE {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 1 {
+# 1
+key $key-2$ {
     label:  '1'
     base:           $base$
     fn:             $fn$
@@ -72,7 +102,8 @@ key 1 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 2 {
+# 2
+key $key-3$ {
     label:  '2'
     base:           $base$
     fn:             $fn$
@@ -84,7 +115,8 @@ key 2 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 3 {
+# 3
+key $key-4$ {
     label:  '3'
     base:           $base$
     fn:             $fn$
@@ -96,7 +128,8 @@ key 3 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 4 {
+# 4
+key $key-5$ {
     label:  '4'
     base:           $base$
     fn:             $fn$
@@ -108,7 +141,8 @@ key 4 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 5 {
+# 5
+key $key-6$ {
     label:  '5'
     base:           $base$
     fn:             $fn$
@@ -120,7 +154,8 @@ key 5 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 6 {
+# 6
+key $key-7$ {
     label:  '6'
     base:           $base$
     fn:             $fn$
@@ -132,7 +167,8 @@ key 6 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 7 {
+# 7
+key $key-8$ {
     label:  '7'
     base:           $base$
     fn:             $fn$
@@ -144,7 +180,8 @@ key 7 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 8 {
+# 8
+key $key-9$ {
     label:  '8'
     base:           $base$
     fn:             $fn$
@@ -156,7 +193,8 @@ key 8 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 9 {
+# 9
+key $key-10$ {
     label:  '9'
     base:           $base$
     fn:             $fn$
@@ -168,7 +206,8 @@ key 9 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key 0 {
+# 0
+key $key-11$ {
     label:  '0'
     base:           $base$
     fn:             $fn$
@@ -180,7 +219,8 @@ key 0 {
     capslock+lalt:  $capslock+lalt$
 }
 
-key MINUS {
+# MINUS
+key $key-12$ {
     label:  '-'
     base:           $base$
     fn:             $fn$
@@ -192,7 +232,8 @@ key MINUS {
     capslock+lalt:  $capslock+lalt$
 }
 
-key EQUALS {
+# EQUALS
+key $key-13$ {
     label:  '='
     base:           $base$
     fn:             $fn$
@@ -204,9 +245,52 @@ key EQUALS {
     capslock+lalt:  $capslock+lalt$
 }
 
+# DEL
+key $key-14$ {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+##### ROW 2 #####
+# TAB
+map key 15 $key-15$
+# GRAVE
+map key 41 $key-41$
+# Q
+map key 16 $key-16$
+# W
+map key 17 $key-17$
+# E
+map key 18 $key-18$
+# R
+map key 19 $key-19$
+# T
+map key 20 $key-20$
+# Y
+map key 21 $key-21$
+# U
+map key 22 $key-22$
+# I
+map key 23 $key-23$
+# O
+map key 24 $key-24$
+# P
+map key 25 $key-25$
+# SEMICOLON
+map key 39 $key-39$
+# FORWARD DEL
+map key 111 $key-111$
+
 # ROW 2 ###############################################################
 
-key TAB {
+# TAB
+key $key-15$ {
     label: '\t'
     base:           $base$
     fn:             $fn$
@@ -218,7 +302,8 @@ key TAB {
     capslock+lalt:  $capslock+lalt$
 }
 
-key GRAVE {
+# GRAVE
+key $key-41$ {
     label:                              '`'
     base:           $base$
     fn:             $fn$
@@ -230,7 +315,8 @@ key GRAVE {
     capslock+lalt:  $capslock+lalt$
 }
 
-key Q {
+# Q
+key $key-16$ {
     label:                              'Q'
     base:           $base$
     fn:             $fn$
@@ -242,7 +328,8 @@ key Q {
     capslock+lalt:  $capslock+lalt$
 }
 
-key W {
+# W
+key $key-17$ {
     label:                              'W'
     base:           $base$
     fn:             $fn$
@@ -254,7 +341,8 @@ key W {
     capslock+lalt:  $capslock+lalt$
 }
 
-key E {
+# E
+key $key-18$ {
     label:                              'E'
     base:           $base$
     fn:             $fn$
@@ -266,7 +354,8 @@ key E {
     capslock+lalt:  $capslock+lalt$
 }
 
-key R {
+# R
+key $key-19$ {
     label:                              'R'
     base:           $base$
     fn:             $fn$
@@ -278,7 +367,8 @@ key R {
     capslock+lalt:  $capslock+lalt$
 }
 
-key T {
+# T
+key $key-20$ {
     label:                              'T'
     base:           $base$
     fn:             $fn$
@@ -290,7 +380,8 @@ key T {
     capslock+lalt:  $capslock+lalt$
 }
 
-key Y {
+# Y
+key $key-21$ {
     label:                              'Y'
     base:           $base$
     fn:             $fn$
@@ -302,7 +393,8 @@ key Y {
     capslock+lalt:  $capslock+lalt$
 }
 
-key U {
+# U
+key $key-22$ {
     label:                              'U'
     base:           $base$
     fn:             $fn$
@@ -314,7 +406,8 @@ key U {
     capslock+lalt:  $capslock+lalt$
 }
 
-key I {
+# I
+key $key-23$ {
     label:                              'I'
     base:           $base$
     fn:             $fn$
@@ -326,7 +419,8 @@ key I {
     capslock+lalt:  $capslock+lalt$
 }
 
-key O {
+# O
+key $key-24$ {
     label:                              'O'
     base:           $base$
     fn:             $fn$
@@ -338,7 +432,8 @@ key O {
     capslock+lalt:  $capslock+lalt$
 }
 
-key P {
+# P
+key $key-25$ {
     label:                              'P'
     base:           $base$
     fn:             $fn$
@@ -350,7 +445,8 @@ key P {
     capslock+lalt:  $capslock+lalt$
 }
 
-key SEMICOLON {
+# SEMICOLON
+key $key-39$ {
     label:                              ';'
     base:           $base$
     fn:             $fn$
@@ -362,9 +458,62 @@ key SEMICOLON {
     capslock+lalt:  $capslock+lalt$
 }
 
+# FORWARD_DEL
+key $key-111$ {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+##### ROW 3 #####
+# CAPS_LOCK
+map key 58 $key-58$
+# BACKSLASH
+map key 43 $key-43$
+# A
+map key 30 $key-30$
+# S
+map key 31 $key-31$
+# D
+map key 32 $key-32$
+# F
+map key 33 $key-33$
+# G
+map key 34 $key-34$
+# H
+map key 35 $key-35$
+# J
+map key 36 $key-36$
+# K
+map key 37 $key-37$
+# L
+map key 38 $key-38$
+# APOSTROPHE
+map key 40 $key-40$
+# ENTER
+map key 28 $key-28$
+
 # ROW 3 ###############################################################
 
-key BACKSLASH {
+# CAPS_LOCK
+key  $key-58$ {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# BACKSLASH
+key $key-43$ {
     label:                              '\u005c'
     base:           $base$
     fn:             $fn$
@@ -376,7 +525,8 @@ key BACKSLASH {
     capslock+lalt:  $capslock+lalt$
 }
 
-key A {
+# A
+key $key-30$ {
     label:                              'A'
     base:           $base$
     fn:             $fn$
@@ -388,7 +538,8 @@ key A {
     capslock+lalt:  $capslock+lalt$
 }
 
-key S {
+# S
+key $key-31$ {
     label:                              'S'
     base:           $base$
     fn:             $fn$
@@ -400,7 +551,8 @@ key S {
     capslock+lalt:  $capslock+lalt$
 }
 
-key D {
+# D
+key $key-32$ {
     label:                              'D'
     base:           $base$
     fn:             $fn$
@@ -412,7 +564,8 @@ key D {
     capslock+lalt:  $capslock+lalt$
 }
 
-key F {
+# F
+key $key-33$ {
     label:                              'F'
     base:           $base$
     fn:             $fn$
@@ -424,7 +577,8 @@ key F {
     capslock+lalt:  $capslock+lalt$
 }
 
-key G {
+# G
+key $key-34$ {
     label:                              'G'
     base:           $base$
     fn:             $fn$
@@ -436,7 +590,8 @@ key G {
     capslock+lalt:  $capslock+lalt$
 }
 
-key H {
+# H
+key $key-35$ {
     label:                              'H'
     base:           $base$
     fn:             $fn$
@@ -448,7 +603,8 @@ key H {
     capslock+lalt:  $capslock+lalt$
 }
 
-key J {
+# J
+key $key-36$ {
     label:                              'J'
     base:           $base$
     fn:             $fn$
@@ -460,7 +616,8 @@ key J {
     capslock+lalt:  $capslock+lalt$
 }
 
-key K {
+# K
+key $key-37$ {
     label:                              'K'
     base:           $base$
     fn:             $fn$
@@ -472,7 +629,8 @@ key K {
     capslock+lalt:  $capslock+lalt$
 }
 
-key L {
+# L
+key $key-38$ {
     label:                              'L'
     base:           $base$
     fn:             $fn$
@@ -484,7 +642,8 @@ key L {
     capslock+lalt:  $capslock+lalt$
 }
 
-key APOSTROPHE {
+# APOSTROPHE
+key $key-40$ {
     label:                              '\''
     base:           $base$
     fn:             $fn$
@@ -496,7 +655,8 @@ key APOSTROPHE {
     capslock+lalt:  $capslock+lalt$
 }
 
-key ENTER {
+# ENTER
+key $key-28$ {
     base:           $base$
     fn:             $fn$
     shift:          $shift$
@@ -507,9 +667,38 @@ key ENTER {
     capslock+lalt:  $capslock+lalt$
 }
 
+##### ROW 4 #####
+# SHIFT_RIGHT
+map key 54 $key-54$
+# LEFT_BRACKET
+map key 26 $key-26$
+# RIGHT_BRACKET
+map key 27 $key-27$
+# Z
+map key 44 $key-44$
+# X
+map key 45 $key-45$
+# C
+map key 46 $key-46$
+# V
+map key 47 $key-47$
+# B
+map key 48 $key-48$
+# N
+map key 49 $key-49$
+# M
+map key 50 $key-50$
+# COMMA
+map key 51 $key-51$
+# PERIOD
+map key 52 $key-52$
+# DPAD_UP
+map key 103 $key-103$
+
 # ROW 4 ###############################################################
 
-key LEFT_BRACKET {
+# LEFT_BRACKET
+key $key-26$ {
     label:                              '['
     base:           $base$
     fn:             $fn$
@@ -521,7 +710,8 @@ key LEFT_BRACKET {
     capslock+lalt:  $capslock+lalt$
 }
 
-key RIGHT_BRACKET {
+# RIGHT_BRACKET
+key $key-27$ {
     label:                              ']'
     base:           $base$
     fn:             $fn$
@@ -533,7 +723,8 @@ key RIGHT_BRACKET {
     capslock+lalt:  $capslock+lalt$
 }
 
-key Z {
+# Z
+key $key-44$ {
     label:                              'Z'
     base:           $base$
     fn:             $fn$
@@ -545,7 +736,8 @@ key Z {
     capslock+lalt:  $capslock+lalt$
 }
 
-key X {
+# X
+key $key-45$ {
     label:                              'X'
     base:           $base$
     fn:             $fn$
@@ -557,7 +749,8 @@ key X {
     capslock+lalt:  $capslock+lalt$
 }
 
-key C {
+# C
+key $key-46$ {
     label:                              'C'
     base:           $base$
     fn:             $fn$
@@ -570,7 +763,8 @@ key C {
 
 }
 
-key V {
+# V
+key $key-47$ {
     label:                              'V'
     base:           $base$
     fn:             $fn$
@@ -582,7 +776,8 @@ key V {
     capslock+lalt:  $capslock+lalt$
 }
 
-key B {
+# B
+key $key-48$ {
     label:                              'B'
     base:           $base$
     fn:             $fn$
@@ -594,7 +789,8 @@ key B {
     capslock+lalt:  $capslock+lalt$
 }
 
-key N {
+# N
+key $key-49$ {
     label:                              'N'
     base:           $base$
     fn:             $fn$
@@ -606,7 +802,8 @@ key N {
     capslock+lalt:  $capslock+lalt$
 }
 
-key M {
+# M
+key $key-50$ {
     label:                              'M'
     base:           $base$
     fn:             $fn$
@@ -618,7 +815,8 @@ key M {
     capslock+lalt:  $capslock+lalt$
 }
 
-key COMMA {
+# COMMA
+key $key-51$ {
     label:                              ','
     base:           $base$
     fn:             $fn$
@@ -630,7 +828,8 @@ key COMMA {
     capslock+lalt:  $capslock+lalt$
 }
 
-key PERIOD {
+# PERIOD
+key $key-52$ {
     label:                              '.'
     base:           $base$
     fn:             $fn$
@@ -642,7 +841,8 @@ key PERIOD {
     capslock+lalt:  $capslock+lalt$
 }
 
-key DPAD_UP {
+# DPAD_UP
+key $key-103$ {
     base:           $base$
     fn:             $fn$
     shift:          $shift$
@@ -652,10 +852,31 @@ key DPAD_UP {
     shift+lalt:     $shift+lalt$
     capslock+lalt:  $capslock+lalt$
 }
+
+##### ROW 5 #####
+# CTRL_LEFT
+map key 29 $key-29$
+# FUNCTION
+map key 464 $key-464$
+# FX Home
+map key 172 $key-172$
+# ALT_LEFT
+map key 56 $key-56$
+# Sym
+map key 249 $key-249$
+# SPACE
+map key 57 $key-57$
+# DPAD_LEFT
+map key 105 $key-105$
+# DPAD_DOWN
+map key 108 $key-108$
+# DPAD_RIGHT
+map key 106 $key-106$
 
 # ROW 5 ###############################################################
 
-key ASSIST {
+# CTRL_LEFT
+key $key-29$ {
     base:           $base$
     fn:             $fn$
     shift:          $shift$
@@ -666,7 +887,56 @@ key ASSIST {
     capslock+lalt:  $capslock+lalt$
 }
 
-key SPACE {
+# FUNCTION
+key $key-464$ {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# FX
+key $key-172$ {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# ALT_LEFT
+key $key-56$ {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# Sym
+key $key-249$ {
+    base:           $base$
+    fn:             $fn$
+    shift:          $shift$
+    capslock:       $capslock$
+    lalt:           $lalt$
+    ralt:           $ralt$
+    shift+lalt:     $shift+lalt$
+    capslock+lalt:  $capslock+lalt$
+}
+
+# SPACE
+key $key-57$ {
     label:    ' '
     base:           $base$
     fn:             $fn$
@@ -678,7 +948,8 @@ key SPACE {
     capslock+lalt:  $capslock+lalt$
 }
 
-key DPAD_LEFT {
+# DPAD_LEFT
+key $key-105$ {
     base:           $base$
     fn:             $fn$
     shift:          $shift$
@@ -689,7 +960,8 @@ key DPAD_LEFT {
     capslock+lalt:  $capslock+lalt$
 }
 
-key DPAD_DOWN {
+# DPAD_DOWN
+key $key-108$ {
     base:           $base$
     fn:             $fn$
     shift:          $shift$
@@ -700,7 +972,8 @@ key DPAD_DOWN {
     capslock+lalt:  $capslock+lalt$
 }
 
-key DPAD_RIGHT {
+# DPAD_RIGHT
+key $key-106$ {
     base:           $base$
     fn:             $fn$
     shift:          $shift$

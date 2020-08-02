@@ -17,21 +17,16 @@ from qwerty_fn import *
 from qwerty_fn_custom import *
 from qwerty_alt import *
 from qwerty_international import *
-
-
+from qwerty_scan_codes import *
 #
-REMAP_SWAP_ALT_FN = r"""
-# Swap alt and fn
-# Alt is now Fn
-map key 464 ALT_LEFT
-# Fn is now Alt
-map key 56 FUNCTION
-"""
-
+from qwertz_scan_codes import *
+from qwertz_printed import *
 
 SWAP_ALT_FN = [
     ("lalt", "fn"),
-    ("fn", "lalt")
+    ("fn", "lalt"),
+    ("map key 464 FUNCTION", "map key 464 ALT_LEFT"),
+    ("map key 56 ALT_LEFT", "map key 56 FUNCTION"),
 ]
 
 SWAP_TAB_FIX = [
@@ -45,15 +40,21 @@ SWAP_TAB_FIX = [
 
 GENERATED_LAYOUTS = [
     {
+        # Setup qwerty scan codes
+        INPUT: "fxtec_pro1_template.kcm",
+        OUTPUT: "pro1_qwerty_scan_codes.kcm",
+        REPLACE:    QWERTY_SCAN_CODES
+    },
+    {
         # Process our QWERTY template
-        INPUT: "pro1_qwerty_template.kcm",
-        OUTPUT: "pro1_qwerty_us_template.kcm",                
-        REPLACE:    REPLACE_PRINTED_QWERTY+
+        INPUT: "pro1_qwerty_scan_codes.kcm",
+        OUTPUT: "pro1_qwerty_us_template.kcm",
+        IS_SOURCE_GENERATED: True,
+        REPLACE:    QWERTY_PRINTED+
                     QWERTY_FN_PRINTED+
                     QWERTY_FN_CUSTOM+
                     REPLACE_FX_QWERTY+
                     QWERTY_ALT,
-        ADD: REMAP_FX                    
     },
     {
         # Process our US template 
@@ -69,7 +70,7 @@ GENERATED_LAYOUTS = [
         OUTPUT: "pro1_qwerty_us_fn_tab_tmp.kcm", 
         IS_SOURCE_GENERATED: True,               
         REPLACE: SWAP_ALT_FN,  
-        ADD: REMAP_SWAP_ALT_FN                    
+        #ADD: REMAP_SWAP_ALT_FN
     },
     {
         # Somehow modifying the same line twice in the same run does not work.
@@ -93,7 +94,7 @@ GENERATED_LAYOUTS = [
         OUTPUT: "pro1_qwerty_us_shift_alias_fn_tab_tmp.kcm", 
         IS_SOURCE_GENERATED: True,               
         REPLACE: SWAP_ALT_FN,  
-        ADD: REMAP_SWAP_ALT_FN                    
+        #ADD: REMAP_SWAP_ALT_FN
     },
     {
         # Somehow modifying the same line twice in the same run does not work.
@@ -102,6 +103,48 @@ GENERATED_LAYOUTS = [
         OUTPUT: "pro1_qwerty_us_shift_alias_fn_tab.kcm", 
         IS_SOURCE_GENERATED: True,               
         REPLACE: SWAP_TAB_FIX,  
+    },
+    # QWERTZ
+    {
+        # Setup QWERTZ scan codes
+        INPUT: "fxtec_pro1_template.kcm",
+        OUTPUT: "pro1_qwertz_scan_codes.kcm",
+        REPLACE:    QWERTZ_SCAN_CODES
+    },
+    {
+        # Process our QWERTY template
+        INPUT: "pro1_qwertz_scan_codes.kcm",
+        OUTPUT: "pro1_qwertz_de_template.kcm",
+        IS_SOURCE_GENERATED: True,
+        REPLACE:    QWERTZ_PRINTED +
+                    #QWERTY_FN_PRINTED +
+                    #QWERTY_FN_CUSTOM +
+                    REPLACE_FX_QWERTY
+                    #QWERTY_ALT,
+    },
+    {
+        # Process our US template
+        # That's the basic US layout
+        INPUT: "pro1_qwertz_de_template.kcm",
+        OUTPUT: "pro1_qwertz_de.kcm",
+        IS_SOURCE_GENERATED: True,
+        REPLACE: CLEANUP_TEMPLATE,
+    },
+    {
+        # Swapping alt and fn
+        INPUT: "pro1_qwertz_de.kcm",
+        OUTPUT: "pro1_qwertz_de_fn_tab_tmp.kcm",
+        IS_SOURCE_GENERATED: True,
+        REPLACE: SWAP_ALT_FN,
+        #ADD: REMAP_SWAP_ALT_FN
+    },
+    {
+        # Somehow modifying the same line twice in the same run does not work.
+        # So we had to take an extra step to patch our TAB
+        INPUT: "pro1_qwertz_de_fn_tab_tmp.kcm",
+        OUTPUT: "pro1_qwertz_de_fn_tab.kcm",
+        IS_SOURCE_GENERATED: True,
+        REPLACE: SWAP_TAB_FIX,
     },
 
 

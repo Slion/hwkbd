@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 37
-        versionName "0.3.0"
+        versionCode 38
+        versionName "0.4.1"
         applicationId "net.slions.hwkbd"
         archivesBaseName = "hwkbd-v$versionName"
     }

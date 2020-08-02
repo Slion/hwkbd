@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="title_activity_main" translatable="false">Fx Qwertz</string>
+
+    <string name="empty_layout">F(x)tec Pro¹ Qwertz - Default</string>
+    <string name="pro1_qwertz_de">F(x)tec Pro¹ Qwertz - DE</string>
+    <string name="pro1_qwertz_de_shift_alias">F(x)tec Pro¹ Qwertz - DE - Shift as Fn</string>
+    <string name="pro1_qwertz_de_fn_tab">F(x)tec Pro¹ Qwertz - DE - Fn+Tab</string>
+    <string name="pro1_qwertz_de_shift_alias_fn_tab">F(x)tec Pro¹ Qwertz - DE - Shift as Fn - Fn+Tab</string>
+
+</resources>

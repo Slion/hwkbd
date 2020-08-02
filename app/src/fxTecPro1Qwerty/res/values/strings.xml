@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_layout">F(x)tec Pro¹ Qwerty - Default</string>
+    <string name="pro1_qwerty_us">F(x)tec Pro¹ Qwerty - US</string>
+    <string name="pro1_qwerty_us_shift_alias">F(x)tec Pro¹ Qwerty - US - Shift as Fn</string>
+    <string name="pro1_qwerty_us_fn_tab">F(x)tec Pro¹ Qwerty - US - Fn+Tab</string>
+    <string name="pro1_qwerty_us_shift_alias_fn_tab">F(x)tec Pro¹ Qwerty - US - Shift as Fn - Fn+Tab</string>
+</resources>
