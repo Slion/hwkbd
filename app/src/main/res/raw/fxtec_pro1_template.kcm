@@ -245,7 +245,7 @@ key $key-13$ {
     capslock+lalt:  $capslock+lalt$
 }
 
-# DEL
+# BACKSPACE
 key $key-14$ {
     base:           $base$
     fn:             $fn$

@@ -76,6 +76,12 @@ QWERTY_FN_PRINTED = [
             (FN, r"'+'"),
         ]
     },
+    {
+        REPL_KEYCODE: "DEL",
+        REPLACE: [
+            (FN, r"replace FORWARD_DEL"),
+        ]
+    },
 # ROW 2 ###############################################################
     {    
         REPL_KEYCODE: "TAB",
